@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "title":"Lima",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
+        "price":"20.9"
+    },
+    {
+        "id":1,
+        "title":"Lima",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
+        "price":"20.9"
+    },
+    {
+        "id":1,
+        "title":"Lima",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
+        "price":"20.9"
+    },
+    {
+        "id":1,
+        "title":"Lima",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
+        "price":"20.9"
+    }
+]
