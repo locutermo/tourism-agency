@@ -25,7 +25,7 @@ export default function FrequentlyTours(pops){
                 <h2 className='font-bold text-2xl'>Excursiones de un día</h2>
                 <p className='text-xs text-gray-500'>120 actividades disponibles ( i )</p>     
             </div>
-            <div className='grid grid-cols-4 gap-8'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
             {tours.map( tour =>  <TourCard item={tour}/>)} 
             </div>
         </div>
