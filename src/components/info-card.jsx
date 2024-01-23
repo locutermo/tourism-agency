@@ -1,18 +1,20 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function Card({children,src,...restProps}){
+export default function InfoCard({children,item,...restProps}){
 
-return <div className="relative h-52 " >
+  let {url,description} = item;
+
+return <div className="relative h-52 hover:opacity-100 opacity-90 cursor-pointer" >
     <Image
         className="rounded-xl"
-        src={src}
+        src={url}
         alt="Card Background"
         layout="fill"
         objectFit="cover"
     />
     <div className="absolute rounded-xl bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50">
-      <h2 className="text-white text-xs font-medium">Recomendaciones de viajeros</h2>
+      <h2 className="text-white text-xs font-medium">{description}</h2>
     </div>
   </div>
     

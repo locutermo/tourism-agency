@@ -1,4 +1,4 @@
-import Card from './card'
+import InfoCard from './info-card'
 import Button from './button'
 
-export {Card,Button}
+export {InfoCard,Button}

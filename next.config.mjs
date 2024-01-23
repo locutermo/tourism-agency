@@ -7,6 +7,11 @@ const nextConfig = {
             hostname: 'media.vogue.mx',
             port: '',
           },
+          {
+            protocol: 'https',
+            hostname: 'cdn.getyourguide.com',
+            port: '',
+          },
         ],
       },
 };

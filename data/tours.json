@@ -1,30 +1,57 @@
 [
     {
         "id":1,
-        "title":"Lima",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
-        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
-        "price":"20.9"
+        "title":"360º Bus Panorámico",
+        "description":"4 horas - Excursiones de un día",
+        "time": "4 horas",
+        "url": "https://cdn.getyourguide.com/img/tour/1cfc0d111c9392fe.jpeg/132.jpg",
+        "price":"20.9",
+        "sold":10,
+        "rates": "4.5",
+        "currency": "S/."
     },
     {
-        "id":1,
-        "title":"Lima",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
-        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
-        "price":"20.9"
+        "id":2,
+        "title":"360º Bus Panorámico",
+        "description":"Excursiones de un día",
+        "time": "4 horas",
+        "url": "https://cdn.getyourguide.com/img/tour/6025e68a7e78b.jpeg/132.jpg",
+        "price":"20.9",
+        "sold":10,
+        "rates": "4.5",
+        "currency": "S/."
     },
     {
-        "id":1,
-        "title":"Lima",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
-        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
-        "price":"20.9"
+        "id":3,
+        "title":"360º Bus Panorámico",
+        "description":"Excursiones de un día",
+        "time": "4 horas",
+        "url": "https://cdn.getyourguide.com/img/tour/29d0e8ed966c23e8.jpeg/132.jpg",
+        "price":"20.9",
+        "sold":10,
+        "rates": "4.5",
+        "currency": "S/."
     },
     {
-        "id":1,
-        "title":"Lima",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
-        "url": "https://media.vogue.mx/photos/5e19fa7ba3810f0008d96d3e/2:3/w_2560%2Cc_limit/Lima-%2520La%2520Costa%2520Verde.jpg",
-        "price":"20.9"
+        "id":4,
+        "title":"Lima: Circuito màgico de agua",
+        "description":"Excursiones de un día",
+        "time": "4 horas",
+        "url": "https://cdn.getyourguide.com/img/tour/5d519f10e7daa.jpeg/132.jpg",
+        "price":"20.9",
+        "sold":10,
+        "rates": "4.5",
+        "currency": "S/."
+    },
+    {
+        "id":5,
+        "title":"Desde Lima: tour en autobus de dia completo por Paracas y Huacachina",
+        "description":"1 dìa sin colas - servicio de recogida incluido",
+        "time": "4 horas",
+        "url": "https://cdn.getyourguide.com/img/tour/6422fea698cd7.jpeg/132.jpg",
+        "price":"20.9",
+        "sold":10,
+        "rates": "4.5",
+        "currency": "S/."
     }
 ]
