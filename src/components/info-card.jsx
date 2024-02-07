@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function InfoCard({children,item,...restProps}){
+export default function InfoCard({children,className,item,...restProps}){
 
   let {url,description} = item;
 
-return <div className="relative h-52 hover:opacity-100 opacity-90 cursor-pointer" >
+return <div className={`relative h-52 hover:opacity-100 opacity-90 cursor-pointer ${className}`} >
     <Image
         className="rounded-xl"
         src={url}

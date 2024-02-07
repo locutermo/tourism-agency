@@ -6,7 +6,6 @@ export async function GET(request, {params} ) {
     const id = params.id
     const data = extractData(filePath)
     const tour = data.find(tour => tour.id == id)
-    console.log(tour)
     return Response.json({ 
         body: tour,
         status: 200,

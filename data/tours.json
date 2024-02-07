@@ -8,7 +8,22 @@
         "price":"20.9",
         "sold":10,
         "rates": "4.5",
-        "currency": "S/."
+        "currency": "S/.",
+        "about":"Participa en una excursión de un día desde Lima a la ciudad costera de Paracas y al oasis de Huacachina con traslados desde el hotel. Disfruta de una excursión en barco por las islas Ballestas, y siente la emoción del sandboarding en el desierto.",
+        "general_information": [
+            {
+                "title":"Cancelación gratuita",
+                "description":"Cancela con hasta 24 horas y recibe un reembolso completo"
+            },
+            {
+                "title":"Reservar ahora y pagar después",
+                "description":"Planes flexibles: reserva tu plaza de inmediato, sin que se te haga el cargo hoy."
+            },
+            {
+                "title":"Duración 1 día",
+                "description":"Comprueba la disponibilidad para ver los horarios de inicio."
+            }
+        ]
     },
     {
         "id":2,
@@ -19,7 +34,14 @@
         "price":"20.9",
         "sold":10,
         "rates": "4.5",
-        "currency": "S/."
+        "currency": "S/.",
+        "text":"Participa en una excursión de un día desde Lima a la ciudad costera de Paracas y al oasis de Huacachina con traslados desde el hotel. Disfruta de una excursión en barco por las islas Ballestas, y siente la emoción del sandboarding en el desierto.",
+        "general_information": [
+            {
+                "title":"Cancelación gratuita",
+                "description":"Cancela con hasta 24 horas y recibe un reembolso completo"
+            }
+        ]
     },
     {
         "id":3,
@@ -30,7 +52,14 @@
         "price":"20.9",
         "sold":10,
         "rates": "4.5",
-        "currency": "S/."
+        "currency": "S/.",
+        "text":"Participa en una excursión de un día desde Lima a la ciudad costera de Paracas y al oasis de Huacachina con traslados desde el hotel. Disfruta de una excursión en barco por las islas Ballestas, y siente la emoción del sandboarding en el desierto.",
+        "general_information": [
+            {
+                "title":"Cancelación gratuita",
+                "description":"Cancela con hasta 24 horas y recibe un reembolso completo"
+            }
+        ]
     },
     {
         "id":4,
@@ -41,7 +70,14 @@
         "price":"20.9",
         "sold":10,
         "rates": "4.5",
-        "currency": "S/."
+        "currency": "S/.",
+        "text":"Participa en una excursión de un día desde Lima a la ciudad costera de Paracas y al oasis de Huacachina con traslados desde el hotel. Disfruta de una excursión en barco por las islas Ballestas, y siente la emoción del sandboarding en el desierto.",
+        "general_information": [
+            {
+                "title":"Cancelación gratuita",
+                "description":"Cancela con hasta 24 horas y recibe un reembolso completo"
+            }
+        ]
     },
     {
         "id":5,
@@ -52,6 +88,13 @@
         "price":"20.9",
         "sold":10,
         "rates": "4.5",
-        "currency": "S/."
+        "currency": "S/.",
+        "text":"Participa en una excursión de un día desde Lima a la ciudad costera de Paracas y al oasis de Huacachina con traslados desde el hotel. Disfruta de una excursión en barco por las islas Ballestas, y siente la emoción del sandboarding en el desierto.",
+        "general_information": [
+            {
+                "title":"Cancelación gratuita",
+                "description":"Cancela con hasta 24 horas y recibe un reembolso completo"
+            }
+        ]
     }
 ]

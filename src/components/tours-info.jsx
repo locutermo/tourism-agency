@@ -11,7 +11,6 @@ export function ToursInfo(props){
       const fetchTours = async () => {
         const response = await fetch("/api/info")
         const data = await response.json()
-        console.log("Datos:",data)
         setTours(data.body)
       }
   
@@ -20,13 +19,17 @@ export function ToursInfo(props){
     },[])
 
 return (
-  <section className="group grid xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-4 md:space-x-3 overflow-hidden max-sm:odd:hidden">
+    <div>
+      <section className="group grid xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-3">
     {
       tours.map( tour => (
-        <InfoCard item={tour}/>
+        <InfoCard item={tour} className="box-border"/>
       ))
     }
-  </section>)
+  </section>
+
+    </div>
+  )
 }
 
 
