@@ -21,7 +21,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body className={`${inter.className} mt-2 flex flex-col space-y-4 lg:mx-32 md:mx-16 sm:mx-16 mx-10 xs:bg-black`}>
+      <body className={`${inter.className} mt-2 flex flex-col space-y-4 lg:mx-32 md:mx-16 sm:mx-16 mx-4 xs:bg-black`}>
         <header className="flex flex-row content-center justify-between h-20">
           <div className="h-100 w-20">
             <Link href="/">

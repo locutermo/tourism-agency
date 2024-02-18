@@ -22,8 +22,44 @@
             {
                 "title":"Duración 1 día",
                 "description":"Comprueba la disponibilidad para ver los horarios de inicio."
+            },
+            {
+                "title":"Entrada sin colas por otro acceso",
+                "description":""
+            },
+            {
+                "title":"Guía",
+                "description":"Español, Inglés"
+            },
+            {
+                "title":"Servicio de recogida opcional",
+                "description":"Comprueba la lista de lugares de recogida al hacer la reserva para ver si tu hotel está incluido entre los lugares de recogida. Si no está en la lista, elige 'Aún no lo sé' y, después de reservar, comunica al proveedor de la actividad dónde te alojas. Te informarán de si es posible la recogida en tu hotel o en la alternativa más cercana. Servicio de recogida en San Isidro: entre las 5:05 AM y las 5:15 AM Recogidas en Miraflores: entre las 5:15 AM y las 5:45 AM Recogidas en Barranco: entre las 6:00 AM y las 6:20 AM Los servicios de recogida del Aeropuerto están pendientes de confirmación"
             }
+        ],
+        "itinerary_steps": [
+            {
+                "title":"6 lugares de recogida disponibles:",
+                "description":"Miraflores, Ingreso Peatonal APM Terminals Callao., Holiday Inn Lima Airport, an IHG Hotel, Barranco, Jorge Chavez International Airport, Peru, San Isidro",
+                "icon":"https://cdn.getyourguide.com/tf/assets/static/icons/itineraries/getyourguide-logo-icon.svg"
+            },
+            {
+                "title":"Furgoneta",
+                "description":"(40 minutos)",
+                "icon":"https://cdn.getyourguide.com/tf/assets/static/icons/itineraries/getyourguide-logo-icon.svg"
+            },
+            {
+                "title":"Plaza San Martín",
+                "description":"Visita, Tour guiado, Recorrido turístico (20 minutos)",
+                "icon":"https://cdn.getyourguide.com/tf/assets/static/icons/itineraries/getyourguide-logo-icon.svg"
+            },
+            {
+                "title":"6 lugares de regreso:",
+                "description":"San Isidro, Jorge Chavez International Airport, Peru, San Isidro",
+                "icon":"https://cdn.getyourguide.com/tf/assets/static/icons/itineraries/getyourguide-logo-icon.svg"
+            }
+
         ]
+    
     },
     {
         "id":2,
