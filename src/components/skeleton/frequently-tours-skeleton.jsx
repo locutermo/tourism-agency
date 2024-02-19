@@ -1,6 +1,4 @@
-const shimmer = `relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_1.5s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent`;
-
-export async function ToursInfoSkeleton() {
+export async function FrequentlyToursSkeleton() {
 
     return (
       <div className="space-y-6 animate-pulse" role="status">
@@ -9,11 +7,11 @@ export async function ToursInfoSkeleton() {
           <div className='bg-gray-300 h-3 w-1/5 rounded-full'></div>
         </div>
         <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
+          <FrequentlyTourSkeleton />
+          <FrequentlyTourSkeleton />
+          <FrequentlyTourSkeleton />
+          <FrequentlyTourSkeleton />
+          <FrequentlyTourSkeleton />
         </div>
       </div>
     );
@@ -22,7 +20,7 @@ export async function ToursInfoSkeleton() {
 
 
 
-  export default async function InfoSkeleton() {
+  export default async function FrequentlyTourSkeleton() {
 
     return (
       <div className="w-full h-96 rounded-md  flex flex-col animate-pulse">
@@ -44,7 +42,7 @@ export async function ToursInfoSkeleton() {
                 <div className='bg-gray-300 h-2 w-1/2 rounded-full'></div>
             </div>
             <div className="flex flex-col text-xs space-y-1 mb-2">
-              <div className={`bg-gray-300 h-6 w-1/2 rounded-full`}></div>
+              <div className={`bg-gray-300 h-2 w-1/2 rounded-full`}></div>
               <div className='bg-gray-300 h-2 w-1/4 rounded-full'></div>
             </div>
         </div>
