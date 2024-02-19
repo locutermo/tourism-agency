@@ -111,7 +111,7 @@ export default async function Page({ params }) {
 
 
 async function getTour(id) {
-    const res = await fetch(`${process.env.SERVER_URL}api/tours/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tours/${id}`, {
         headers: {
             'Content-Type': 'application/json;charset=iso-8859-1'
         },
