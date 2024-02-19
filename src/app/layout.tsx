@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({
-  children,...restProps
+  children
 }: Readonly<{
   children: React.ReactNode;
-  restProps?: any
+  
 }>) {
 
   return (
@@ -27,7 +27,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer/>
-        </body>   
+      </body>   
     </html>
       
   );
