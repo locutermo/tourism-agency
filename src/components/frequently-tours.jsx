@@ -27,8 +27,8 @@ export default function FrequentlyTours(pops){
                 <p className='text-xs text-gray-500'>120 actividades disponibles ( i )</p>     
             </div>
             <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
-            {tours.map( tour =>  (
-                <Link href={`/tours/${tour.id}`}>
+            {tours.map( (tour,index) =>  (
+                <Link key={index} href={`/tours/${tour.id}`}>
                     <TourCard item={tour}/>
                 </Link>
             ))} 
