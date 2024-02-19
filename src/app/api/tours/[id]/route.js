@@ -1,4 +1,4 @@
-
+import {getTourDetail} from '../../service'
 export async function GET(request, {params} ){
 
     
