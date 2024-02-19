@@ -1,5 +1,5 @@
 'use client';
-import { put,PutBlobResult } from "@vercel/blob";
+import { PutBlobResult } from "@vercel/blob";
 
 2
 
@@ -15,7 +15,7 @@ export default function Tours() {
             const file = ref.current.files[0];
 
             const response = await fetch(
-            `https://tourism-agency-brown.vercel.app/api/avatar/upload?filename=${file.name}`,
+            `${process.env.NEXT_PUBLIC_SERVER_URL}/api/avatar/upload?filename=${file.name}`,
             {
                 method: 'POST',
                 body: file,
