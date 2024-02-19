@@ -5,10 +5,7 @@ import Datepicker from "react-tailwindcss-datepicker";
 export default function SearchTours(props) {
 
   const [search, setSearch] = useState('')
-  const [value, setValue] = useState({
-    startDate: new Date(),
-    endDate: new Date().setMonth(2)
-  });
+  const [value, setValue] = useState(null);
 
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
