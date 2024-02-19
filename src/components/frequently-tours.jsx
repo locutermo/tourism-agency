@@ -1,26 +1,12 @@
-'use client'
 import React from 'react'
-import { useState,useEffect } from "react";
 import {Button,InfoCard} from "@/components"
 import Image from 'next/image';
 import Link from 'next/link';
 import TourCard from "@/components/tour-card";
-export default function FrequentlyTours(props){
+import { getAgencyTours } from '@/app/api/service';
+export default async function FrequentlyTours(props){
 
-    const [tours,setTours] = useState([]);
-    
-    useEffect(() => {
-  
-      const fetchTours = async () => {
-        const response = await fetch("/api/tours")
-        console.log(response)
-        const data = await response.json()
-        setTours(data.body)
-      }
-  
-      fetchTours()
-      
-    },[])
+    const tours = await getAgencyTours()
 
     return (
         <div className="space-y-6">

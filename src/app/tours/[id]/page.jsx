@@ -2,20 +2,21 @@ import { Button } from "@/components"
 import Image from "next/image"
 import ItinerarySteps from "@/components/itinerary-steps"
 import FloatingButton from "@/components/floating-button"
+import { getTourDetail } from "@/app/api/service"
 export default async function Page({ params }) {
-    const tour = await getTour(params.id)
+    const tour = await getTourDetail(params.id)
     return (
         <div className="space-y-7">
             <section className="flex flex-col">
                 <span>AVENTURA</span>
-                <h1 className='text-2xl font-bold'>{tour.body?.title}</h1>
+                <h1 className='text-2xl font-bold'>{tour.title}</h1>
                 <div className="grid grid-cols-12 grid-rows-2 gap-2 h-80 my-6">
                     <div className="relative  md:col-span-8 col-span-12 row-span-2 rounded-lg">
                         <FloatingButton position={"top-left"}>
                             Ver las 8 fotos
                         </FloatingButton>
                         <Image
-                            src={tour.body?.url}
+                            src={tour.url}
                             className="rounded-sm"
                             alt="Card Background"
                             layout="fill"
@@ -33,7 +34,7 @@ export default async function Page({ params }) {
                             </FloatingButton>
                             <Image
                                 className="rounded-sm"
-                                src={tour.body?.url}
+                                src={tour.url}
                                 alt="Card Background"
                                 layout="fill"
                                 objectFit="cover"
@@ -46,7 +47,7 @@ export default async function Page({ params }) {
 
                             <Image
                                 className="rounded-sm"
-                                src={tour.body?.url}
+                                src={tour.url}
                                 alt="Card Background"
                                 layout="fill"
                                 objectFit="cover"
@@ -57,7 +58,7 @@ export default async function Page({ params }) {
                         <div className="relative w-full h-full">
                             <Image
                                 className="rounded-sm"
-                                src={tour.body?.url}
+                                src={tour.url}
                                 alt="Card Background"
                                 layout="fill"
                                 objectFit="cover"
@@ -66,11 +67,11 @@ export default async function Page({ params }) {
                     </div>
                 </div>
                 <div className="flex flex-row space-x-8">
-                    <p className="text-gray-700 text-xs w-full md:w-2/3">{tour.body?.about}</p>
+                    <p className="text-gray-700 text-xs w-full md:w-2/3">{tour.about}</p>
                     <div className="w-1/3 text-right md:flex flex-row justify-between items-center hidden">
                         <div className="text-left">
                             <p className="text-xs text-gray-700">Desde</p>
-                            <h2 className="font-bold md:text-xl text-xs">{tour.body?.currency} {tour.body?.price}</h2>
+                            <h2 className="font-bold md:text-xl text-xs">{tour.currency} {tour.price}</h2>
                             <p className="text-xs text-gray-700">por persona</p>
                         </div>
                         <Button>Ver disponibilidad</Button>
@@ -82,7 +83,7 @@ export default async function Page({ params }) {
                 <section>
                     <h2 className='font-bold text-lg mb-4'>Información general</h2>
                     <ul className="space-y-4">
-                        {tour.body?.general_information?.map((item, index) => (
+                        {tour.general_information?.map((item, index) => (
                             <li key={index} className="space-y-2">
                                 <div className="flex flex-row space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -98,7 +99,7 @@ export default async function Page({ params }) {
                 </section>
                 <section >
                     <h2 className='font-bold text-lg mb-4'>Tu experiencia</h2>
-                    <ItinerarySteps steps={tour?.body?.itinerary_steps}/>
+                    <ItinerarySteps steps={tour?.itinerary_steps}/>
                 </section>
             </div>
 
@@ -110,15 +111,15 @@ export default async function Page({ params }) {
 
 
 
-async function getTour(id) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tours/${id}`, {
-        headers: {
-            'Content-Type': 'application/json;charset=iso-8859-1'
-        },
-        next: {
-            tags: ['info'],
-            revalidate: 60
-        }
-    })
-    return res.json()
-}
+// async function getTour(id) {
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tours/${id}`, {
+//         headers: {
+//             'Content-Type': 'application/json;charset=iso-8859-1'
+//         },
+//         next: {
+//             tags: ['info'],
+//             revalidate: 60
+//         }
+//     })
+//     return res.json()
+// }

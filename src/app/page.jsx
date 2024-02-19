@@ -1,4 +1,5 @@
-import {ToursInfo,ToursInfoSkeleton} from "@/components/tours-info";
+import {ToursInfoSkeleton} from "@/components/skeleton/list-info-skeleton";
+import ToursInfo from "@/components/tours-info"
 import Info from '@/components/info'
 import FrequentlyTours from '@/components/frequently-tours'
 import SearchTours from '@/components/search-tours'
@@ -12,11 +13,18 @@ export default async function Home(props) {
       <Suspense fallback={<ToursInfoSkeleton/>}>
         <ToursInfo/>
       </Suspense>
-      <FrequentlyTours/>
+      <Suspense fallback={<ToursInfoSkeleton/>}>
+        <FrequentlyTours/>
+      </Suspense>
+      
       
     </main>
   );
 }
 
 
+function InfoSkeleton(props){
+  return <div className="h-80 w-1/2 bg-gray-200">
 
+  </div>
+}
