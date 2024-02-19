@@ -12,6 +12,12 @@ const nextConfig = {
             hostname: 'cdn.getyourguide.com',
             port: '',
           },
+          {
+            protocol: 'https',
+            hostname: '1i5elpn4gcvm9tci.public.blob.vercel-storage.com',
+            port: '',
+          },
+          
         ],
       },
 };
