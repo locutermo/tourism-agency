@@ -1,15 +1,25 @@
-import {buildFilePath,extractData} from '../../util'
+import { ObjectId } from "mongodb";
+import clientPromise from "../../../lib/mongodb";
 
 export async function GET(request, {params} ) {
 
-    const filePath = buildFilePath('data','tours.json')
     const id = params.id
-    const data = extractData(filePath)
-    const tour = data.find(tour => tour.id == id)
-    return Response.json({ 
-        body: tour,
-        status: 200,
-    })
+    try {
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("tours")
+            .findOne({ _id: new ObjectId(id) })
+        
+        return Response.json({ 
+            body: data,
+            status: 200
+        })
+
+
+    } catch (e) {
+        console.error(e);
+    }
 
 
 }

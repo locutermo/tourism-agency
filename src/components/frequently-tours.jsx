@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import {Button,InfoCard} from "@/components"
 import Image from 'next/image';
 import Link from 'next/link';
-export default function FrequentlyTours(pops){
+export default function FrequentlyTours(props){
 
     const [tours,setTours] = useState([]);
     
@@ -28,7 +28,7 @@ export default function FrequentlyTours(pops){
             </div>
             <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
             {tours.map( (tour,index) =>  (
-                <Link key={index} href={`/tours/${tour.id}`}>
+                <Link key={index} href={`/tours/${tour._id}`}>
                     <TourCard item={tour}/>
                 </Link>
             ))} 
