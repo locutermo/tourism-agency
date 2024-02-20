@@ -2,10 +2,31 @@ import { Button } from "@/components"
 import Image from "next/image"
 import ItinerarySteps from "@/components/itinerary-steps"
 import FloatingButton from "@/components/floating-button"
-import { getTourDetail } from "@/app/api/service"
+import {getTour} from '@/lib/agency'
 import Breadcrumb from '@/components/breadcrumb'
+import {notFound} from 'next/navigation'
+
+export async function generateMetadata({
+    params
+  }){
+    const tour = await getTour(params.id);
+  
+    if (!tour) return notFound();
+  
+    return {
+      title: tour?.seo?.title || tour.title,
+      description: tour?.seo?.description || tour.description,
+    };
+  }
+
+
 export default async function Page({ params }) {
-    const tour = await getTourDetail(params.id)
+    const tour = await getTour(params.id)
+
+    if(!tour){
+        return notFound()
+    }
+
     return (
         <div className="space-y-7">
             <Breadcrumb links={[{title:tour.title,href:tour.url}]} />
@@ -109,19 +130,3 @@ export default async function Page({ params }) {
         </div>
     )
 }
-
-
-
-
-// async function getTour(id) {
-//     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/tours/${id}`, {
-//         headers: {
-//             'Content-Type': 'application/json;charset=iso-8859-1'
-//         },
-//         next: {
-//             tags: ['info'],
-//             revalidate: 60
-//         }
-//     })
-//     return res.json()
-// }

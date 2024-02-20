@@ -1,9 +1,9 @@
 import React from 'react'
 import {Button,InfoCard} from "@/components"
-import {getAgencyInformation} from '@/app/api/service'
+import {getCategories} from '@/lib/agency'
 
-export default async function ToursInfo(props){
-  const tours = await getAgencyInformation()
+export default async function ToursCategories(props){
+  const tours = await getCategories(['categories'],60)
     
 return (
     <div>

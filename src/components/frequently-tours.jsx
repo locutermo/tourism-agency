@@ -1,12 +1,11 @@
 import React from 'react'
-import {Button,InfoCard} from "@/components"
-import Image from 'next/image';
 import Link from 'next/link';
 import TourCard from "@/components/tour-card";
-import { getAgencyTours } from '@/app/api/service';
+import {getTours} from '@/lib/agency'
+
 export default async function FrequentlyTours(props){
 
-    const tours = await getAgencyTours()
+    const tours = await getTours(["tours"],10)
 
     return (
         <div className="space-y-6">
