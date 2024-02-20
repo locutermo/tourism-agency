@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="es">
+    <html lang="es" dir="ltr">
       <body className={`${inter.className} mt-2 flex flex-col space-y-8  `}>
         <Header/>
         <main className="lg:mx-32 md:mx-16 sm:mx-16 mx-4">

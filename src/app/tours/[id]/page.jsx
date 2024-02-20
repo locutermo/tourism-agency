@@ -3,12 +3,14 @@ import Image from "next/image"
 import ItinerarySteps from "@/components/itinerary-steps"
 import FloatingButton from "@/components/floating-button"
 import { getTourDetail } from "@/app/api/service"
+import Breadcrumb from '@/components/breadcrumb'
 export default async function Page({ params }) {
     const tour = await getTourDetail(params.id)
     return (
         <div className="space-y-7">
+            <Breadcrumb links={[{title:tour.title,href:tour.url}]} />
             <section className="flex flex-col">
-                <span>AVENTURA</span>
+                <span className="text-gray-400">{tour?.type ||"AVENTURA" }</span>
                 <h1 className='text-2xl font-bold'>{tour.title}</h1>
                 <div className="grid grid-cols-12 grid-rows-2 gap-2 h-80 my-6">
                     <div className="relative  md:col-span-8 col-span-12 row-span-2 rounded-lg">
