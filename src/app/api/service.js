@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import clientPromise from "../../lib/mongodb";
 
-export const getAgencyInformation = async () => {
+export const getActivityCategories = async () => {
     try{
 
     
@@ -9,7 +9,7 @@ export const getAgencyInformation = async () => {
         const db = client.db(process.env.MONGODB_DATABASE);
  
         const data = await db
-            .collection("information")
+            .collection("categories")
             .find({})
             .sort({ metacritic: -1 })
             .toArray();

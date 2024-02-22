@@ -2,7 +2,7 @@ import React from 'react'
 import {Button,InfoCard} from "@/components"
 import {getCategories} from '@/lib/agency'
 
-export default async function ToursCategories(props){
+export default async function ActivityCategories(props){
   const tours = await getCategories(['categories'],60)
     
 return (

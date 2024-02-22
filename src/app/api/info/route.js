@@ -1,7 +1,7 @@
-import {getAgencyInformation} from '../service'
+import {getActivityCategories} from '../service'
 export async function GET(req, res) {
 
-    const data = await getAgencyInformation();
+    const data = await getActivityCategories();
 
     return Response.json({ 
         body: data,

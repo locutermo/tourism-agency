@@ -8,7 +8,7 @@ export default function InfoCard({children,className,item,...restProps}){
 
 return <div className={`relative h-52 hover:opacity-100 opacity-90 cursor-pointer ${className}`} >
     <Image
-        className="rounded-xl"
+        className="rounded-xl cursor-pointer"
         src={url}
         alt="Card Background"
         fill

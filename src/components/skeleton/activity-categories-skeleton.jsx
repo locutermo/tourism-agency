@@ -1,16 +1,16 @@
-export async function ToursInfoSkeleton() {
+export async function ActivityCategoriesSkeleton() {
 
     return (
       <div className="group grid xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-3 animate-pulse" role="status">
 
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
-          <InfoSkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
+          <CategorySkeleton />
 
 
       </div>
@@ -20,7 +20,7 @@ export async function ToursInfoSkeleton() {
 
 
 
-  export default async function InfoSkeleton() {
+  export default async function CategorySkeleton() {
 
     return (
       <div className="relative h-52 hover:opacity-100 opacity-90 animate-pulse">

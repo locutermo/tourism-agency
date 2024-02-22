@@ -1,6 +1,6 @@
 import {FrequentlyToursSkeleton} from "@/components/skeleton/frequently-tours-skeleton";
-import {ToursInfoSkeleton} from '@/components/skeleton/information-tours-skeleton'
-import ToursCategories from "@/components/tours-categories"
+import {ActivityCategoriesSkeleton} from '@/components/skeleton/activity-categories-skeleton'
+import ActivityCategories from "@/components/activity-categories"
 import Info from '@/components/info'
 import FrequentlyTours from '@/components/frequently-tours'
 import SearchTours from '@/components/search-tours'
@@ -11,8 +11,8 @@ export default async function Home(props) {
     <main className="flex min-h-screen flex-col space-y-10">
       <SearchTours/>
       <Info/>
-      <Suspense fallback={<ToursInfoSkeleton/>}>
-        <ToursCategories/>
+      <Suspense fallback={<ActivityCategoriesSkeleton/>}>
+        <ActivityCategories/>
       </Suspense>
       <Suspense fallback={<FrequentlyToursSkeleton/>}>
         <FrequentlyTours/>
