@@ -1,4 +1,5 @@
 import Image from "next/image"
+import {rgbDataURL} from '@/lib/util'
 export default function TourCard({item}){
     let {url,title,description,time,price,sold,rates,currency} = item
     return (
@@ -8,7 +9,7 @@ export default function TourCard({item}){
                 {/* Por revisar */}
                 <span className='absolute top-0 left-0 text-white text-xs text-center w-full'>Top pick</span>
             </dir>
-            <Image src={url} layout="fill" objectFit="cover" alt={title} className='h-1/2 w-full rounded-t-md'/>
+            <Image placeholder="blur"  blurDataURL={rgbDataURL(237,181,6)} src={url} fill objectFit="cover" alt={title} className='h-1/2 w-full rounded-t-md'/>
         </div>
         <div className="h-1/2 w-full rounded-b-md border-gray-200 border-2 p-3 flex flex-col justify-between">
             <div className="space-y-1 flex flex-col">

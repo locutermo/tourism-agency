@@ -42,7 +42,7 @@ export default async function Page({ params }) {
                             src={tour.url}
                             className="rounded-sm"
                             alt="Card Background"
-                            layout="fill"
+                            fill
                             objectFit="cover"
                         />
                     </div>
@@ -59,7 +59,7 @@ export default async function Page({ params }) {
                                 className="rounded-sm"
                                 src={tour.url}
                                 alt="Card Background"
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                             />
                         </div>
@@ -72,7 +72,7 @@ export default async function Page({ params }) {
                                 className="rounded-sm"
                                 src={tour.url}
                                 alt="Card Background"
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                             />
                         </div>
@@ -83,7 +83,7 @@ export default async function Page({ params }) {
                                 className="rounded-sm"
                                 src={tour.url}
                                 alt="Card Background"
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                             />
                         </div>
