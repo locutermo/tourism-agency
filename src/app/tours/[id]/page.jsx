@@ -43,7 +43,7 @@ export default async function Page({ params }) {
                             className="rounded-sm"
                             alt="Card Background"
                             fill
-                            objectFit="cover"
+                            style={{objectFit:"cover"}}
                         />
                     </div>
                     <div className="sm:flex hidden col-span-4 row-span-1 bg-gray-200">
@@ -60,7 +60,7 @@ export default async function Page({ params }) {
                                 src={tour.url}
                                 alt="Card Background"
                                 fill
-                                objectFit="cover"
+                                style={{objectFit:"cover"}}
                             />
                         </div>
 
@@ -73,7 +73,7 @@ export default async function Page({ params }) {
                                 src={tour.url}
                                 alt="Card Background"
                                 fill
-                                objectFit="cover"
+                                style={{objectFit:"cover"}}
                             />
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default async function Page({ params }) {
                                 src={tour.url}
                                 alt="Card Background"
                                 fill
-                                objectFit="cover"
+                                style={{objectFit:"cover"}}
                             />
                         </div>
                     </div>

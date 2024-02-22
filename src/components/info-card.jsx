@@ -12,8 +12,9 @@ return <div className={`relative h-52 hover:opacity-100 opacity-90 cursor-pointe
         src={url}
         alt="Card Background"
         fill
+        sizes="100%"
         placeholder="blur"  blurDataURL={rgbDataURL(237,181,6)}
-        objectFit="cover"
+        style={{objectFit:"cover"}}
     />
     <div className="absolute rounded-b-xl bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50">
       <h2 className="text-white text-xs font-medium">{description}</h2>

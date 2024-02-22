@@ -8,6 +8,7 @@ export default async function Header(params){
             <Link href="/">
               <Image 
                 src={"https://cdn.getyourguide.com/tf/assets/static/logos/gyg-logo.svg"}
+                className="h-auto w-auto"
                 alt="Picture of the author"
                 width={60}
                 height={60}

@@ -9,7 +9,14 @@ export default function TourCard({item}){
                 {/* Por revisar */}
                 <span className='absolute top-0 left-0 text-white text-xs text-center w-full'>Top pick</span>
             </dir>
-            <Image placeholder="blur"  blurDataURL={rgbDataURL(237,181,6)} src={url} fill objectFit="cover" alt={title} className='h-1/2 w-full rounded-t-md'/>
+            <Image placeholder="blur"  
+                blurDataURL={rgbDataURL(237,181,6)} 
+                src={url} 
+                fill 
+                style={{objectFit:"cover"}} 
+                alt={title} 
+                sizes="100%"
+                className='h-1/2 w-full rounded-t-md'/>
         </div>
         <div className="h-1/2 w-full rounded-b-md border-gray-200 border-2 p-3 flex flex-col justify-between">
             <div className="space-y-1 flex flex-col">
