@@ -1,9 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
+import LoginButton from "@/components/login-btn"
 export default async function Header(params){
     
     return (
-        <header className="flex flex-row content-center justify-between h-20 lg:mx-32 md:mx-16 sm:mx-16 mx-4">
+        <header className="flex flex-row content-center items-center justify-between h-20 lg:px-32 md:px-16 sm:px-16 px-4 bg-white">
           <div className="h-100 w-20">
             <Link href="/">
               <Image 
@@ -30,6 +31,7 @@ export default async function Header(params){
               </svg>
               <span className="text-[10px] text-gray-500  text-center">Carrito</span>
             </Link>
+            <LoginButton/>
           </div>
         </header>
     )

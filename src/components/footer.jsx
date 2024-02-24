@@ -47,7 +47,7 @@ export default async function Footer(params){
 
     
     return (
-        <footer className="w-full h-80 bg-indigo-950 lg:px-32 md:px-16 sm:px-16 px-4">
+        <footer className="w-full h-80 bg-indigo-950 lg:px-32 md:px-16 sm:px-16 px-4 align-bottom">
         <div className="w-full h-full flex flex-col justify-between">
           <div className=" w-full h-3/4 pt-8 px-4 [&>ol]:text-white  [&>ol]:md:text-sm text-xs flex flex-col md:flex-row md:justify-between" >
             <ol>
