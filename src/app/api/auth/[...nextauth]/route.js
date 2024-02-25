@@ -1,10 +1,8 @@
 // imports
 import NextAuth from "next-auth"
 
-// importing providers
-import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google";
-
+import {create} from '../../../actions'
 const handler = NextAuth({
     providers: [
         
@@ -13,6 +11,14 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
           })
     ],
+    callbacks:{
+        async signIn({ user, account, profile, email, credentials }) {
+            create("user",user)
+            create("account",account)
+            create("profile",profile)
+            return true
+          },
+    },
     secret: process.env.NEXTAUTH_SECRET,
 })
 
