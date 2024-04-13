@@ -1,7 +1,7 @@
 import { getInternationalDestinations } from '@/lib/agency'
 import Image from 'next/image'
 export default async function InternationalSection({ ...restProps }) {
-    const destinations = await getInternationalDestinations(['international-destinations'])
+    const destinations = []
 
     return <section className=" py-8 px-12 md:px-20 xl:px-[20%] flex flex-col w-full">
         <h3 className="text-xl font-bold md:text-3xl text-center py-10 text-purple-900">Destinos internacionales</h3>
