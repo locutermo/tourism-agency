@@ -23,6 +23,16 @@ const nextConfig = {
             hostname: '**.googleusercontent.com',
             port: '',
           },
+          {
+            protocol: 'https',
+            hostname: '**.kayak.com.pe',
+            port: '',
+          },
+          {
+            protocol: 'https',
+            hostname: 'upload.wikimedia.org',
+            port: '',
+          },
           
         ],
       },

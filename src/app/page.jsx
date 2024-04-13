@@ -5,6 +5,8 @@ import Info from '@/components/info'
 import FrequentlyTours from '@/components/frequently-tours'
 import SearchTours from '@/components/search-tours'
 import { Suspense } from "react";
+import InternationalSection from "@/components/international-section";
+
 export default async function Home(props) {
 
   return (
@@ -14,10 +16,11 @@ export default async function Home(props) {
       <Suspense fallback={<ActivityCategoriesSkeleton/>}>
         <ActivityCategories/>
       </Suspense>
-      <Suspense fallback={<FrequentlyToursSkeleton/>}>
+      {/* <Suspense fallback={<FrequentlyToursSkeleton/>}>
         <FrequentlyTours/>
-      </Suspense>
-      
+      </Suspense> */}
+
+      <InternationalSection />
     </main>
   );
 }

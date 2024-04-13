@@ -9,7 +9,7 @@ import SessionWrapper from "@/components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Agencia de Turismo",
+  title: "Ruta Mundial",
   description: "...",
 };
 
@@ -27,7 +27,8 @@ export default function RootLayout({
     <html lang="es" dir="ltr">
       <body  className={`${inter.className} body-group  flex flex-col w-full  `}>
           <Header/>
-          <main className="[&>*]:lg:px-32 [&>*]:md:px-16 [&>*]:sm:px-16 [&>*]:px-4 [&>*]:py-8">
+          {/* <main className="[&>*]:lg:px-32 [&>*]:md:px-16 [&>*]:sm:px-16 [&>*]:px-4 [&>*]:py-8"> */}
+          <main>
             {children}
           </main>
           <Footer/>

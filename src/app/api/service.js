@@ -54,3 +54,19 @@ export const getTourDetail = async (id) => {
         return null
     }
 }
+
+export const getInternationalDestinations = async () => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("international-destination")
+            .find({})
+            .sort({ metacritic: -1 })
+            .toArray();
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}
