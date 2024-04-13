@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default async function InternationalSection({ ...restProps }) {
     const destinations = await getInternationalDestinations(['international-destinations'])
 
-    return <section className="p-12 md:px-20 xl:px-[20%] flex flex-col w-full">
+    return <section className=" py-8 px-12 md:px-20 xl:px-[20%] flex flex-col w-full">
         <h3 className="text-xl font-bold md:text-3xl text-center py-10 text-purple-900">Destinos internacionales</h3>
         <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((restination, index) => (

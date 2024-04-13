@@ -5,17 +5,19 @@ import Info from '@/components/info'
 import FrequentlyTours from '@/components/frequently-tours'
 import SearchTours from '@/components/search-tours'
 import { Suspense } from "react";
+import HeaderMedia from "@/components/header-media";
 import InternationalSection from "@/components/international-section";
 
 export default async function Home(props) {
 
   return (
-    <main className="flex min-h-screen flex-col space-y-10">
-      <SearchTours/>
-      <Info/>
-      <Suspense fallback={<ActivityCategoriesSkeleton/>}>
+    <main className="flex min-h-screen flex-col">
+      <HeaderMedia/>
+      {/* <SearchTours/>
+      <Info/> */}
+      {/* <Suspense fallback={<ActivityCategoriesSkeleton/>}>
         <ActivityCategories/>
-      </Suspense>
+      </Suspense> */}
       {/* <Suspense fallback={<FrequentlyToursSkeleton/>}>
         <FrequentlyTours/>
       </Suspense> */}
