@@ -1,5 +1,6 @@
 import { getInternationalDestinations } from '@/lib/agency'
 import Image from 'next/image'
+import Link from 'next/link'
 export default async function InternationalSection({ ...restProps }) {
     const destinations = await getInternationalDestinations(['international-destinations'])
 
@@ -7,14 +8,16 @@ export default async function InternationalSection({ ...restProps }) {
         <h3 className="text-xl font-bold md:text-3xl text-center py-10 text-purple-900">Destinos internacionales</h3>
         <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {destinations?.map((destination, index) => (
-                <DestinationCard key={index} {...restProps} {...destination} />
+                <Link href={`/destinations/international/${destination._id}`} key={destination._id}>
+                    <DestinationCard key={destination._id} {...restProps} {...destination} />
+                </Link>
             ))}
         </div>
     </section>
 }
 
 
-const DestinationCard = ({ name, img, flag }) => {
+const DestinationCard = ({name, img, flag }) => {
     return <div className="h-52 xl:h-64 w-full rounded-xl relative cursor-pointer">
         <Image src={img.sm} alt={`Foto de ${name}`} fill sizes='100%' className='rounded-xl ' />
         <div className="w-full rounded-xl absolute bg-black z-1 h-full opacity-20 text-center">

@@ -70,3 +70,18 @@ export const getInternationalDestinations = async () => {
         return null
     }
 }
+
+export const getInternationalDestination = async (id) => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("international-destination")
+            .findOne({ _id: new ObjectId(id) })
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}
+
