@@ -84,7 +84,7 @@ export default function HeaderDestination({ destination }) {
                 <h2 className="py-8 text-2xl uppercase font-extrabold">Temporadas</h2>
                 <div className="w-full flex flex-col">
                     {selected.seasons?.map((season, index) => (
-                        <div className={` ${season.position == 'left' ? 'self-start' : 'self-end'} w-1/2 text-${season.position} `}>
+                        <div key={index} className={` ${season.position == 'left' ? 'self-start' : 'self-end'} w-1/2 text-${season.position} `}>
                             <h1 className="text-xl ">{season.name}</h1>
                             <p>{season.description}</p>
                         </div>
