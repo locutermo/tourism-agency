@@ -50,39 +50,48 @@ export default function HeaderDestination({ destination }) {
                 <p className="md:w-1/2 text-xs lg:text-sm">{selected.description}</p>
             </div>
         )}
-        <div className="flex flex-col">
-            <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Actividades Turísticas</h2>
-            <div className="w-full lg:px-40">
-                <Carousel items={selected.activities} />
+        {selected.activities?.length > 0 && (
+            <div className="flex flex-col">
+                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Actividades Turísticas</h2>
+                <div className="w-full lg:px-40">
+                    <Carousel items={selected.activities} />
 
+                </div>
             </div>
-        </div>
-        <div className="flex flex-col">
-            <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Gastronomía</h2>
-            <div className="w-full lg:px-40">
-                <Carousel items={selected.gastronomies} />
+        )}
+        {selected.gastronomies?.length > 0 && (
+            <div className="flex flex-col">
+                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Gastronomía</h2>
+                <div className="w-full lg:px-40">
+                    <Carousel items={selected.gastronomies} />
 
+                </div>
             </div>
-        </div>
-        <div className="flex flex-col">
-            <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Hoteles</h2>
-            <div className="w-full lg:px-40">
-                <Carousel items={selected.hotels} />
+        )}
 
-            </div>
-        </div>
-        <div className={`flex flex-col ${customPadding}`}>
-            <h2 className="py-8 text-2xl uppercase font-extrabold">Temporadas</h2>
-            <div className="w-full flex flex-col">
-                {selected.seasons?.map((season, index) => (
-                    <div className={` ${season.position == 'left' ? 'self-start' : 'self-end'} w-1/2 text-${season.position} `}>
-                        <h1 className="text-xl ">{season.name}</h1>
-                        <p>{season.description}</p>
-                    </div>
-                ))}
+        {selected.hotels?.length > 0 && (
+            <div className="flex flex-col">
+                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Hoteles</h2>
+                <div className="w-full lg:px-40">
+                    <Carousel items={selected.hotels} />
 
+                </div>
             </div>
-        </div>
+        )}
+        {selected.seasons?.length > 0 && (
+            <div className={`flex flex-col ${customPadding}`}>
+                <h2 className="py-8 text-2xl uppercase font-extrabold">Temporadas</h2>
+                <div className="w-full flex flex-col">
+                    {selected.seasons?.map((season, index) => (
+                        <div className={` ${season.position == 'left' ? 'self-start' : 'self-end'} w-1/2 text-${season.position} `}>
+                            <h1 className="text-xl ">{season.name}</h1>
+                            <p>{season.description}</p>
+                        </div>
+                    ))}
+
+                </div>
+            </div>
+        )}
     </section>
 
     )

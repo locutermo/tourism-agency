@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Image from "next/image"
 
-export default function Carousel({ items }) {
+export default function Carousel({ items=[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const handleNext = () => {
         setCurrentIndex((prevIndex) => prevIndex == (items.length - 1) ? 0 : prevIndex + 1);
@@ -11,11 +11,12 @@ export default function Carousel({ items }) {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => prevIndex == 0 ? items.length - 1 : (prevIndex - 1));
     };
+
     return (
         <div id="default-carousel" class="relative w-full" data-carousel="slide">
             <div class="relative overflow-hidden rounded-lg md:min-h-[700px]">
-                {items.map((item, index) => (
-                    <div class={`${index != currentIndex && 'hidden'} duration-700 ease-in-out`}>
+                {items?.map((item, index) => (
+                    <div key={index}  className={`${index != currentIndex && 'hidden'} duration-700 ease-in-out`}>
                         <Image
                             alt="Prueba"
                             src={item.img.lg}
@@ -35,7 +36,7 @@ export default function Carousel({ items }) {
             {/* <!-- Slider indicators --> */}
             <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                 {items.map((item, index) => (
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current={index + 1 == currentIndex} aria-label={`Slide ${index}`}></button>
+                    <button key={index} type="button" class="w-3 h-3 rounded-full" aria-current={index + 1 == currentIndex} aria-label={`Slide ${index}`}></button>
 
                 ))}
             </div>
