@@ -15,7 +15,7 @@ export default function HeaderDestination({ destination }) {
                 className="h-52"
                 alt="Prueba"
                 style={{ objectFit: "cover" }}
-                src={destination.img.lg}
+                src={destination.img?.lg}
                 fill
                 sizes="100%"
             />
@@ -29,7 +29,7 @@ export default function HeaderDestination({ destination }) {
                 <div className="absolute z-40 w-full h-auto bottom-0 ">
                     <div className="flex justify-center space-x-2 md:space-x-6  w-full">
                         {destination.places?.map((place, index) => (
-                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name == place.name && 'bg-purple-800 text-white'} hover:bg-purple-800 hover:text-white bg-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
+                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name == place.name && 'bg-purple-700 text-white'} hover:bg-purple-800 hover:text-white bg-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
                                 <h3 className="text-xs md:text-sm">{place.name}</h3>
                             </button>
                         ))}
