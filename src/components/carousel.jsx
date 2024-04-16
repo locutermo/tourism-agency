@@ -18,7 +18,7 @@ export default function Carousel({ items=[] }) {
                 {items?.map((item, index) => (
                     <div key={index}  className={`${index != currentIndex && 'hidden'} duration-700 ease-in-out`}>
                         <Image
-                            alt="Prueba"
+                            alt={item.name}
                             src={item.img.lg}
                             fill
                             sizes="100%"

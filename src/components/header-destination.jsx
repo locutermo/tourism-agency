@@ -13,7 +13,7 @@ export default function HeaderDestination({ destination }) {
             <div className="absolute z-20 w-full bg-black h-full left-0 opacity-40"></div>
             <Image
                 className="h-52"
-                alt="Prueba"
+                alt={destination.name}
                 style={{ objectFit: "cover" }}
                 src={destination.img?.lg}
                 fill
@@ -42,6 +42,7 @@ export default function HeaderDestination({ destination }) {
                 <div className="relative md:w-1/2 min-h-52 md:min-h-72 ">
                     <Image
                         className="rounded-xl"
+                        alt={selected.nameç}
                         src={selected?.img?.md}
                         fill
                         sizes="100%"
