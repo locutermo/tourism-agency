@@ -15,7 +15,7 @@ export async function generateMetadata({
 }
 
 
-export default async function Page({ params, ...restProps }) {
+async function Page({ params }) {
 
     const destination = await getInternationalDestination(params.id)
 
@@ -23,7 +23,7 @@ export default async function Page({ params, ...restProps }) {
         return notFound()
     }
 
-    return (
-        <HeaderDestination destination={destination} />
-    )
+    return (<HeaderDestination destination={destination}/>)
 }
+
+export default Page
