@@ -59,7 +59,7 @@ export default function Carousel({ items = [] }) {
 
 
 const CarouselButton = ({ children, handleClick,position }) => {
-    return <button type="button" onClick={handleClick} className={`absolute top-0 ${position=='left'?'start':'end'}-0 z-30 flex items-center justify-center h-full px-1 md:px-4 cursor-pointer group focus:outline-none`}>
+    return <button type="button" onClick={handleClick} className={`absolute top-0 ${position}-0 z-30 flex items-center justify-center h-full px-1 md:px-4 cursor-pointer group focus:outline-none`}>
         <span className="inline-flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             {children}
         </span>
