@@ -26,10 +26,11 @@ export default function HeaderDestination({ destination }) {
                 </div>
             </div>
             {destination.places && (
+
                 <div className="absolute z-40 w-full h-auto bottom-0 ">
                     <div className="flex justify-center space-x-2 md:space-x-6  w-full">
                         {destination.places?.map((place, index) => (
-                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name == place.name && 'bg-purple-700 text-white'} hover:bg-purple-800 hover:text-white bg-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
+                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name === place.name ? 'bg-purple-700 text-white' : 'bg-white text-black'} hover:bg-purple-800 hover:text-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
                                 <h3 className="text-xs md:text-sm">{place.name}</h3>
                             </button>
                         ))}
@@ -37,6 +38,7 @@ export default function HeaderDestination({ destination }) {
                 </div>
             )}
         </div>
+
         {selected && (
             <div className="w-full space-y-6 flex flex-col md:flex-row p-12 md:p-14 lg:p-36 lg:px-60 md:space-x-8 lg:space-x-16">
                 <div className="relative md:w-1/2 min-h-52 md:min-h-72 ">
@@ -52,48 +54,58 @@ export default function HeaderDestination({ destination }) {
             </div>
         )}
         {selected.activities?.length > 0 && (
-            <div className="flex flex-col">
-                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Actividades Turísticas</h2>
-                <div className="w-full lg:px-40">
-                    <Carousel items={selected.activities} />
-
-                </div>
-            </div>
+            <CarouselContainer title="Actividades Turísticas">
+                <Carousel items={selected.activities} />
+            </CarouselContainer>
         )}
         {selected.gastronomies?.length > 0 && (
-            <div className="flex flex-col">
-                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Gastronomía</h2>
-                <div className="w-full lg:px-40">
-                    <Carousel items={selected.gastronomies} />
-
-                </div>
-            </div>
+            <CarouselContainer title="Gastronomía">
+                <Carousel items={selected.gastronomies} />
+            </CarouselContainer>
         )}
 
         {selected.hotels?.length > 0 && (
-            <div className="flex flex-col">
-                <h2 className="px-40 py-8 text-2xl uppercase font-extrabold">Hoteles</h2>
-                <div className="w-full lg:px-40">
-                    <Carousel items={selected.hotels} />
-
-                </div>
-            </div>
+            <CarouselContainer title="Hoteles">
+                <Carousel items={selected.hotels} />
+            </CarouselContainer>
         )}
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2400 800">
+            <defs>
+                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="sssurf-grad">
+                    <stop stop-color="hsl(208, 77%, 50%)" stop-opacity="1" offset="0%"></stop>
+                    <stop stop-color="hsl(208, 74%, 93%)" stop-opacity="1" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <g fill="hsl(230, 55%, 40%)" transform="matrix(1,0,0,1,10.8282470703125,309.02282905578613)">
+                <path d="M-10,10C33.75,12.291666666666666,114.58333333333334,26.625,200,21C285.41666666666663,15.375,316.66666666666663,-18.666666666666668,400,-17C483.33333333333337,-15.333333333333334,516.6666666666666,29.833333333333332,600,29C683.3333333333334,28.166666666666668,716.6666666666666,-21.208333333333332,800,-21C883.3333333333334,-20.791666666666668,916.6666666666666,30,1000,30C1083.3333333333333,30,1116.6666666666667,-21.416666666666668,1200,-21C1283.3333333333333,-20.583333333333332,1316.6666666666667,32.416666666666664,1400,32C1483.3333333333333,31.583333333333332,1516.6666666666667,-24.875,1600,-23C1683.3333333333333,-21.125,1716.6666666666667,39.958333333333336,1800,41C1883.3333333333333,42.041666666666664,1916.6666666666667,-16.958333333333332,2000,-18C2083.3333333333335,-19.041666666666668,2118.75,30.166666666666664,2200,36C2281.25,41.833333333333336,2296.25,-65.83333333333333,2390,10C2483.75,85.83333333333333,3252.0833333333335,214.58333333333331,2650,400C2047.9166666666665,585.4166666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,35)" opacity="0.05"></path>
+                <path d="M-10,10C33.75,12.291666666666666,114.58333333333334,26.625,200,21C285.41666666666663,15.375,316.66666666666663,-18.666666666666668,400,-17C483.33333333333337,-15.333333333333334,516.6666666666666,29.833333333333332,600,29C683.3333333333334,28.166666666666668,716.6666666666666,-21.208333333333332,800,-21C883.3333333333334,-20.791666666666668,916.6666666666666,30,1000,30C1083.3333333333333,30,1116.6666666666667,-21.416666666666668,1200,-21C1283.3333333333333,-20.583333333333332,1316.6666666666667,32.416666666666664,1400,32C1483.3333333333333,31.583333333333332,1516.6666666666667,-24.875,1600,-23C1683.3333333333333,-21.125,1716.6666666666667,39.958333333333336,1800,41C1883.3333333333333,42.041666666666664,1916.6666666666667,-16.958333333333332,2000,-18C2083.3333333333335,-19.041666666666668,2118.75,30.166666666666664,2200,36C2281.25,41.833333333333336,2296.25,-65.83333333333333,2390,10C2483.75,85.83333333333333,3252.0833333333335,214.58333333333331,2650,400C2047.9166666666665,585.4166666666667,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,70)" opacity="1.00"></path>
+            </g>
+        </svg>
         {selected.seasons?.length > 0 && (
             <div className={`flex flex-col ${customPadding}`}>
-                <h2 className="py-8 text-2xl uppercase font-extrabold">Temporadas</h2>
+
+                <h2 className="py-8 text-xl md:text-2xl uppercase font-extrabold">Temporadas</h2>
                 <div className="w-full flex flex-col">
                     {selected.seasons?.map((season, index) => (
-                        <div key={index} className={` ${season.position == 'left' ? 'self-start' : 'self-end'} w-1/2 text-${season.position} `}>
-                            <h1 className="text-xl ">{season.name}</h1>
-                            <p>{season.description}</p>
+                        <div key={index} className={` ${season.position == 'left' ? 'md:self-start' : 'md:self-end'} md:w-1/2 md:text-${season.position} py-4`}>
+                            <h1 className="text-md md:text-xl ">{season.name}</h1>
+                            <p className="text-xs md:text-sm">{season.description}</p>
                         </div>
                     ))}
-
+                    
                 </div>
             </div>
         )}
     </section>
 
     )
+}
+
+const CarouselContainer = ({ children, title }) => {
+    return <div className="flex flex-col">
+        <h2 className="px-8 md:px-20 lg:px-40 py-8 text-xl md:text-2xl uppercase font-extrabold">{title}</h2>
+        <div className="w-full lg:px-40">
+            {children}
+        </div>
+    </div>
 }
