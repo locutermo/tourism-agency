@@ -41,7 +41,7 @@ export default function Carousel({ items = [] }) {
                 ))}
             </div>
             {/* <!-- Slider controls --> */}
-            <CarouselButton handleClick={handlePrev}>
+            <CarouselButton position='left' handleClick={handlePrev}>
                 <svg className="w-3 h-3 md:w-4 md:h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
                 </svg>
@@ -58,7 +58,7 @@ export default function Carousel({ items = [] }) {
 }
 
 
-const CarouselButton = ({ children, handleClick,position='left' }) => {
+const CarouselButton = ({ children, handleClick,position }) => {
     return <button type="button" onClick={handleClick} className={`absolute top-0 ${position==='left'?'start':'end'}-0 z-30 flex items-center justify-center h-full px-1 md:px-4 cursor-pointer group focus:outline-none`}>
         <span class="inline-flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             {children}
