@@ -25,7 +25,7 @@ export default function LoginButton() {
         <div className={`absolute z-10 p-4 w-auto ${!isOpen && 'hidden'} text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-3 dark:bg-gray-700`}>
           <ul className="space-y-4 w-full" aria-labelledby="mega-menu-dropdown-button">
             <li>
-              <Link href="/profile" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
+              <Link href="/profile" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500">
                 Ver Perfil
               </Link>
             </li>

@@ -31,7 +31,7 @@ export async function getInternationalDestinations(tags,revalidate){
 
 export async function getInternationalDestination(id){
     const res = await fetch(`${domain}/api/destinations/international/${id}`,
-    { next: { revalidate: 1,tags:[] } });
+    { next: { revalidate: 3600,tags:[] } });
     const data = await res.json();
     return data?.body
 }

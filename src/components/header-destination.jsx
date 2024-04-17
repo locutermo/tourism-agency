@@ -72,8 +72,8 @@ export default function HeaderDestination({ destination }) {
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2400 800">
             <defs>
                 <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="sssurf-grad">
-                    <stop stop-color="hsl(208, 77%, 50%)" stop-opacity="1" offset="0%"></stop>
-                    <stop stop-color="hsl(208, 74%, 93%)" stop-opacity="1" offset="100%"></stop>
+                    <stop stopColor="hsl(208, 77%, 50%)" stopOpacity="1" offset="0%"></stop>
+                    <stop stopColor="hsl(208, 74%, 93%)" stopOpacity="1" offset="100%"></stop>
                 </linearGradient>
             </defs>
             <g fill="hsl(230, 55%, 40%)" transform="matrix(1,0,0,1,10.8282470703125,309.02282905578613)">
