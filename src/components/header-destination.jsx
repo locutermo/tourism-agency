@@ -30,7 +30,7 @@ export default function HeaderDestination({ destination }) {
                 <div className="absolute z-40 w-full h-auto bottom-0 ">
                     <div className="flex justify-center space-x-2 md:space-x-6  w-full">
                         {destination.places?.map((place, index) => (
-                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name === place.name ? 'bg-purple-700 text-white' : 'bg-white text-black'} hover:bg-purple-800 hover:text-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
+                            <button key={index} onClick={() => { setSelected(place) }} className={`${selected.name === place.name ? 'bg-white text-black' : 'bg-purple-900 text-white'} hover:bg-purple-600 hover:text-white p-2 px-4 lg:py-4 lg:px-9 rounded-t-xl lg:rounded-t-2xl cursor-pointer`}>
                                 <h3 className="text-xs md:text-sm">{place.name}</h3>
                             </button>
                         ))}
@@ -89,16 +89,29 @@ export default function HeaderDestination({ destination }) {
                     {selected.seasons?.map((season, index) => (
                         <div key={index} className={` ${season.position == 'left' ? 'md:self-start' : 'md:self-end'} md:w-1/2 md:text-${season.position} py-4`}>
                             <h1 className="text-md md:text-xl ">{season.name}</h1>
-                            <p className="text-xs md:text-sm">{season.description}</p>
+                            {getDescription(season.description)}
                         </div>
                     ))}
-                    
+
                 </div>
             </div>
         )}
     </section>
 
     )
+}
+
+const getDescription = (text) => {
+    if (text.includes("-")) {
+        return (<ul>
+            {text.split("-").filter(e => e != "").map((item ,index)=> (
+                <li key={index} className="text-xs md:text-sm">
+                    <p>{item}</p>
+                </li>
+            ))}
+        </ul>)
+    } else return <p className="text-xs md:text-sm">{text}</p>
+
 }
 
 const CarouselContainer = ({ children, title }) => {
