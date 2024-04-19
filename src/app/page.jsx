@@ -18,9 +18,6 @@ export default async function Home(props) {
       {/* <Suspense fallback={<ActivityCategoriesSkeleton/>}>
         <ActivityCategories/>
       </Suspense> */}
-      {/* <Suspense fallback={<FrequentlyToursSkeleton/>}>
-        <FrequentlyTours/>
-      </Suspense> */}
 
       <InternationalSection />
     </main>
