@@ -23,11 +23,11 @@ export default function Carousel({ items = [] }) {
                             fill
                             sizes="100%"
                         />
-                        <div className="absolute z-20 w-full bg-black h-full left-0 opacity-40"></div>
+                        <div className="absolute z-20 w-full bg-black h-full left-0  opacity-40"></div>
                         <div className="absolute z-30 w-full h-full left-0">
                             <div className="flex w-full md:w-2/3 lg:w-1/2 h-full px-10 md:px-20 lg:px-32 flex-col justify-center md:space-y-2">
                                 <h1 className="text-white font-extrabold md:text-4xl lg:text-5xl py-1 md:py-0">{item.name}</h1>
-                                <p className="text-white text-xs lg:text-sm">{item.description}</p>
+                                <p className="text-white text-xs md:text-base lg:text-sm">{item.description}</p>
                             </div>
                         </div>
                     </div>

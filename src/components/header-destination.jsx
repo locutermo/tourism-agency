@@ -9,8 +9,8 @@ const customPadding = 'p-12 md:p-14 lg:p-36 lg:px-60'
 export default function HeaderDestination({ destination }) {
     const [selected, setSelected] = useState(destination?.places[0])
     return (<section className="w-full h-auto">
-        <div className="relative w-full h-72 md:h-[500px] lg:min-h-screen bg-red-200">
-            <div className="absolute z-20 w-full bg-black h-full left-0 opacity-40"></div>
+        <div className="relative w-full h-72 md:h-[500px] lg:min-h-screen ">
+            <div className="absolute z-20 w-full bg-black  h-full left-0 opacity-40"></div>
             <Image
                 className="h-52"
                 alt={destination.name}
@@ -84,7 +84,7 @@ export default function HeaderDestination({ destination }) {
         {selected.seasons?.length > 0 && (
             <div className={`flex flex-col ${customPadding}`}>
 
-                <h2 className="py-8 text-xl md:text-2xl uppercase font-extrabold">Temporadas</h2>
+                <h2 className="py-8 text-xl md:text-2xl uppercase font-extrabold text-[#3245a4]">Temporadas</h2>
                 <div className="w-full flex flex-col">
                     {selected.seasons?.map((season, index) => (
                         <div key={index} className={` ${season.position == 'left' ? 'md:self-start' : 'md:self-end'} md:w-1/2 md:text-${season.position} py-4`}>
@@ -116,7 +116,7 @@ const getDescription = (text) => {
 
 const CarouselContainer = ({ children, title }) => {
     return <div className="flex flex-col">
-        <h2 className="px-8 md:px-20 lg:px-40 py-8 text-xl md:text-2xl uppercase font-extrabold">{title}</h2>
+        <h2 className="px-8 md:px-20 lg:px-40 py-8 text-base md:text-xl lg:text-2xl uppercase font-extrabold text-[#3245a4]">{title}</h2>
         <div className="w-full lg:px-40">
             {children}
         </div>

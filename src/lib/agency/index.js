@@ -24,7 +24,7 @@ export async function getTour(id){
 
 export async function getInternationalDestinations(tags,revalidate){
     const res = await fetch(`${domain}/api/destinations/international`,
-    { next: { revalidate: revalidate || 3600,tags:tags||[] } });
+    { next: { revalidate: revalidate || 1,tags:tags||[] } });
     const data = await res.json();
     return data?.body
 }
