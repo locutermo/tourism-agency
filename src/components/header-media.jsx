@@ -1,8 +1,8 @@
 export default async function HeaderMedia() {
 
     return <section className="w-full h-auto lg:max-w-[1700px]  self-center">
-        <div className="relative w-full h-56 md:h-[450px] lg:min-h-screen">
-            <div className="absolute z-20 w-full bg-black shadow  h-full left-0 opacity-40"></div>
+        <div className="relative w-full h-full">
+            <div className="absolute z-20 w-full bg-black shadow-right  h-full left-0 opacity-50"></div>
 
             <div className="absolute z-20 w-full h-full left-0">
                 <div className="flex w-full md:w-2/3 lg:w-2/4 h-full px-8 md:px-20 lg:px-32 flex-col justify-center items-start ">
