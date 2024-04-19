@@ -3,7 +3,7 @@ import Image from "next/image"
 export default async function Header(params) {
 
   return (
-    <header className="absolute z-50 w-full h-12 max-w-[2000px]  self-center  md:h-20">
+    <header className="absolute z-50 w-full h-12 max-w-[1700px]  self-center  md:h-20">
       <div className="absolute lg:px-40 w-full z-30 h-full">
         <div className="flex justify-between h-full items-center  md:justify-between w-full  lg:px-32 md:px-16 sm:px-16 px-4 z-40">
           <NavLink name="Contacto" url="/contact" />
