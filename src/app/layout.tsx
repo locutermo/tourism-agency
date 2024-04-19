@@ -9,8 +9,8 @@ import SessionWrapper from "@/components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ruta Mundial",
-  description: "...",
+  title: "Ruta Mundial: Viaja por todo el mundo",
+  description: "Cotiza nuestros paquetes por todo el mundo con un seguimiento personalizado y seguro.",
 };
 
 
@@ -19,24 +19,24 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode,
-  
+
 }>) {
 
   return (
     <SessionWrapper>
-    <html lang="es" dir="ltr">
-      <body  className={`${inter.className} body-group  flex flex-col w-full  `}>
-          <Header/>
+      <html lang="es" dir="ltr">
+        <body className={`${inter.className} body-group  flex flex-col w-full  `}>
+          <Header />
           {/* <main className="[&>*]:lg:px-32 [&>*]:md:px-16 [&>*]:sm:px-16 [&>*]:px-4 [&>*]:py-8"> */}
-          <main>
+          <main >
             {children}
           </main>
-          <Footer/>
-        <SpeedInsights/>
-        <Analytics />
-      </body>   
-    </html>
+          <Footer />
+          <SpeedInsights />
+          <Analytics />
+        </body>
+      </html>
     </SessionWrapper>
-      
+
   );
 }

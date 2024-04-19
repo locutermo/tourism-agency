@@ -12,9 +12,9 @@ export default async function Home(props) {
 
   return (
     <main className="flex min-h-screen flex-col">
-      <HeaderMedia/>
-      {/* <SearchTours/>
-      <Info/> */}
+      <Suspense fallback={<p>Cargando...</p>}>
+        <HeaderMedia/>
+      </Suspense>
       {/* <Suspense fallback={<ActivityCategoriesSkeleton/>}>
         <ActivityCategories/>
       </Suspense> */}
