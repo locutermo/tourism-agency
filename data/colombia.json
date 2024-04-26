@@ -1,0 +1,189 @@
+{
+  "_id": { "$oid": "662b0ffa28c570106660900e" },
+  "name": "COLOMBIA",
+  "img":
+    {
+      "sm": "/images/COLOMBIA-sm-500.webp",
+      "lg": "/images/COLOMBIA_lg_1500.webp"
+    },
+  "description": "Explora Colombia desde los Andes hasta las playas caribeñas de Cartagena. Sumérgete en la magia colonial de Cartagena y relájate en las hermosas playas de Santa Marta. Disfruta del café colombiano de fama mundial y explora la rica cultura de la región caribeña. Con experiencias únicas y la calidez de su gente, Colombia te espera con sorpresas inolvidables en Cartagena, Santa Marta y sus alrededores",
+  "places":
+    [
+      {
+        "_id": { "$oid": "661b6a6a8b2f9e51fe4b6d67" },
+        "name": "Cartagena",
+        "img": { "md": "/images/cartagena/CARTAGENA_1500_LG.webp" },
+        "activities":
+          [
+            {
+              "name": "Ciudad con Castillo de San Felipe",
+              "description": "Recorre las encantadoras calles empedradas de Cartagena y descubre su historia colonial. Visita el imponente Castillo de San Felipe, una fortaleza que guarda los secretos de la ciudad",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_ACTIVIDAD_VISITA_A_CIUDAD_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Full Day a Santa Marta",
+              "description": "Disfruta de un día completo explorando las maravillas naturales de Santa Marta. Desde sus playas vírgenes hasta sus parques nacionales, esta excursión te llevará a descubrir la belleza del Caribe colombiano",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_ACTIVIDAD_FULL_DAY_SANTA_MARTA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Isla del Rosario",
+              "description": "Sumérgete en aguas turquesas y arena blanca en un pasadía en la Isla del Encanto en el archipiélago de Islas del Rosario. Relájate bajo el sol y disfruta de actividades acuáticas en este paraíso caribeño",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_ACTIVIDAD_PASADÍA_ISLA_DEL_ENCANTO_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Cena en Yate de Lujo Sibarita Master",
+              "description": "Este tour te lleva a la península de Samaná, conocida por sus paisajes tropicales, playas vírgenes y cascadas impresionantes. Podrás hacer excursiones en barco para avistar ballenas jorobadas (en temporada), visitar la cascada El Limón, disfrutar de playas como Playa Rincón y explorar la belleza natural de la región",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_ACTIVIDAD_CENA_SIBARITA_MASTER_1500_LG.webp"
+                }
+            },
+            {
+                "name": "Pasadía Bora-Bora Area Beach Club",
+                "description": "Relájate y disfruta del lujo en el Bora-Bora Area Beach Club, donde podrás disfrutar de cómodas instalaciones frente al mar, deliciosos cócteles y un ambiente de entretenimiento y relajación en la playa",
+                "img":
+                  {
+                    "lg": "/images/cartagena/CARTAGENA_ACTIVIDAD_BORA_BORA_1500_LG.webp"
+                  }
+              }
+          ],
+        "description": "Cartagena de Indias, ciudad colonial llena de historia en la costa caribeña de Colombia. Calles empedradas y coloridas casas evocan tiempos de piratas y conquistadores. Plazas animadas y museos revelan la riqueza cultural de la región. Sus playas como Bocagrande y Playa Blanca ofrecen aguas cristalinas y paisajes tropicales para disfrutar",
+        "gastronomies":
+          [
+            {
+              "name": "Sabores tropicales",
+              "description": "La gastronomía de Cartagena fusiona sabores tropicales con influencias africanas, españolas e indígenas. Destacan platos como la bandeja paisa, el ceviche de camarón y el sancocho, acompañados de arroz con coco y patacones. Los dulces tradicionales como las cocadas y el postre de tres leches son irresistibles. Para refrescarte, prueba el jugo de corozo o la limonada de coco.",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_GASTRONOMÍA_1500_LG.webp"
+                }
+            }
+          ],
+        "hotels":
+          [
+            {
+              "name": "Hotel Intercontinental",
+              "stars": { "$numberInt": "4" },
+              "description": "Este hotel de renombre internacional brinda lujo y confort, con habitaciones elegantes, restaurantes gourmet, spa y acceso directo a la playa, ideal para una experiencia de primer nivel en Cartagena",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_INTERCONTINENTAL_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Estelar",
+              "stars": { "$numberInt": "4" },
+              "description": "Reconocido por su hospitalidad y servicio excepcional, este hotel ofrece una estancia confortable y conveniente, con instalaciones modernas y una ubicación estratégica",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_ESTELAR_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Sonesta Cartagena",
+              "description": "Con un estilo contemporáneo y servicios de primera clase, este hotel ofrece una experiencia de alojamiento de alta calidad, con vistas panorámicas al mar y comodidades modernas",
+              "stars": { "$numberInt": "4" },
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_SONESTA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Capilla del Mar",
+              "description": "Este hotel frente al mar combina elegancia y comodidad, con amplias habitaciones, piscinas, spa y opciones gastronómicas exclusivas para una experiencia de lujo",
+              "stars": { "$numberInt": "4" },
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_CAPILLA_DEL_MAR_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Almirante Cartagena",
+              "stars": { "$numberInt": "4" },
+              "description": "Con vistas al mar Caribe, este hotel ofrece alojamiento de lujo, spa, restaurantes gourmet y actividades para toda la familia, ideal para una estadía relajante",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_ALMIRANTE_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Capilla del Mar",
+              "stars": { "$numberInt": "4" },
+              "description": "Con vistas al mar Caribe, este hotel ofrece alojamiento de lujo, spa, restaurantes gourmet y actividades para toda la familia, ideal para una estadía relajante",
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_CAPILLA_DEL_MAR_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Hotel Dann Cartagena",
+              "description": "Con un diseño elegante y moderno, este hotel ofrece comodidades de alta calidad, piscina, restaurantes gourmet y una ubicación estratégica para explorar Cartagena",
+              "stars": { "$numberInt": "4" },
+              "img":
+                {
+                  "lg": "/images/cartagena/CARTAGENA_HOTEL_DANN_CARTAGENA_1500_LG.webp"
+                }
+            },
+            {
+                "name": "Hotel Cartagena Plaza",
+                "description": "Situado en el corazón de Cartagena, este hotel brinda acceso fácil a la ciudad amurallada y a las playas. Ofrece servicios cómodos y una experiencia agradable para los huéspedes",
+                "stars": { "$numberInt": "3" },
+                "img":
+                  {
+                    "lg": "/images/cartagena/CARTAGENA_HOTEL_CARTAGENA_PLAZA_1500_LG.webp"
+                  }
+              },
+              {
+                "name": "Hotel Dorado Plaza Bocagrande",
+                "description": "Ubicado en la zona de Bocagrande, este hotel ofrece comodidades básicas y una ubicación conveniente cerca de la playa y diversas atracciones turísticas",
+                "stars": { "$numberInt": "3" },
+                "img":
+                  {
+                    "lg": "/images/cartagena/CARTAGENA_HOTEL_DORADO_PLAZA_BOCAGRANDE_1500_LG.webp"
+                  }
+              }
+          ],
+        "seasons":
+          [
+            {
+              "name": "Diciembre a Febrero (Temporada Seca)",
+              "description": "Durante estos meses, Cartagena experimenta un clima seco y soleado, con temperaturas que suelen oscilar entre los 28°C y 32°C. Es una época ideal para disfrutar de las playas y actividades al aire libre sin preocuparse por las lluvias",
+              "position": "left"
+            },
+            {
+              "name": "Marzo a Abril (Transición a la Temporada de Lluvias)",
+              "description": "En esta etapa, el clima comienza a cambiar hacia la temporada de lluvias, pero aún se pueden experimentar días mayormente secos y soleados. Las temperaturas siguen siendo cálidas, pero es posible que haya algunas lluvias esporádicas",
+              "position": "right"
+            },
+            {
+              "name": "Mayo a Septiembre (Temporada de Lluvias)",
+              "description": "Durante estos meses, Cartagena entra en su temporada de lluvias, con precipitaciones más frecuentes. Sin embargo, las lluvias suelen ser breves y seguidas de sol, por lo que aún es posible disfrutar de actividades al aire libre",
+              "position": "left"
+            },
+            {
+              "name": "Octubre a Noviembre (Transición a la Temporada Seca)",
+              "description": "En esta etapa, el clima comienza a mejorar gradualmente, con menos lluvias y más días soleados. Es un momento de transición hacia la temporada seca, aunque aún es posible experimentar algunas lluvias ocasionales",
+              "position": "right"
+            },
+            {
+              "description": "Esta división te permite tener una idea clara de cómo varía el clima en Cartagena a lo largo del año y cuáles son las mejores épocas para visitar según tus preferencias climáticas",
+              "position": "left"
+            }
+          ]
+      }
+    ],
+  "seo":
+    {
+      "title": "Ruta Mundial: CARTAGENA",
+      "description": "Cartagena de Indias, ciudad colonial llena de historia en la costa caribeña de Colombia. Calles empedradas y coloridas casas evocan tiempos de piratas y conquistadores. Plazas animadas y museos revelan la riqueza cultural de la región. Sus playas como Bocagrande y Playa Blanca ofrecen aguas cristalinas y paisajes tropicales para disfrutar"
+    }
+}

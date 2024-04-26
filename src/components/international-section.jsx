@@ -4,9 +4,9 @@ import Link from 'next/link'
 export default async function InternationalSection({ ...restProps }) {
     const destinations = await getInternationalDestinations(['international-destinations'])
 
-    return <section className="py-8 px-4 md:px-20 xl:px-[20%] flex z-50 flex-col w-full">
+    return <section className="py-8 px-4 md:px-20 xl:px-[10%] flex z-50 flex-col w-full">
         <h3 className="text-xl font-bold md:text-3xl text-center py-10 text-[#3245a4]">Destinos internacionales</h3>
-        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {destinations?.map((destination, index) => (
                 <Link href={`/destinations/international/${destination._id}`} key={destination._id}>
                     <DestinationCard key={destination._id} {...restProps} {...destination} />

@@ -1,0 +1,201 @@
+{
+  "_id": { "$oid": "662b3ba828c5701066609010" },
+  "name": "BRASIL",
+  "img":
+    {
+      "sm": "/images/BRASIL-sm-500.webp",
+      "lg": "/images/BRASIL_lg_1500.webp"
+    },
+  "description": "Sumérgete en la exuberancia de Brasil, desde la selva tropical del Amazonas  hasta las icónicas playas de Copacabana en Río de Janeiro . Disfruta de la música y la alegría que se respira en cada esquina , prueba la variedad de sabores de la cocina brasileña  y relájate en lujosos alojamientos frente al mar . ¡Brasil te espera con los brazos abiertos para vivir una experiencia única!",
+  "places":
+    [
+      {
+        "_id": { "$oid": "661b6a6a8b2f9e51fe8b6d67" },
+        "name": "Río de Janeiro",
+        "img": { "md": "/images/rio_de_janeiro/RIO_DE_JANEIRO_1500_LG.webp" },
+        "activities":
+          [
+            {
+              "name": "Full Day: Río de Janeiro",
+              "description": "Descubre los iconos de la ciudad como el Cristo Redentor en el Corcovado, el Pan de Azúcar con sus impresionantes vistas, y las coloridas Escaleras de Selarón, mientras disfrutas de la vibrante cultura y belleza natural de Río de Janeiro",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_ACTIVIDADES_FULL_DAY_EN_RIO_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Tour Completo en Búzios",
+              "description": "Explora las hermosas playas, calles empedradas y encanto bohemio de Búzios, conocida por sus aguas cristalinas, actividades acuáticas y vida nocturna animada",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_ACTIVIDADES_BUZIOS_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Tour Petrópolis Imperial",
+              "description": "Sumérgete en la historia imperial de Brasil visitando Petrópolis, con sus palacios históricos, museos, jardines exuberantes y la Casa de Santos Dumont, además de disfrutar de la arquitectura y paisajes de montaña",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_ACTIVIDADES_PETROPOLIS_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Tour Angra dos Reis",
+              "description": "Navega por las aguas turquesas de Angra dos Reis y sus islas paradisíacas, donde podrás relajarte en playas tranquilas, hacer snorkel en arrecifes de coral y disfrutar de la exuberante vegetación tropical",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_ACTIVIDADES_ANGRA_DOS_REIS_1500_LG.webp"
+                }
+            },
+            {
+                "name": "Tour Arraial do Cabo",
+                "description": "Descubre las playas de aguas cristalinas y arenas blancas de Arraial do Cabo, conocido como el Caribe brasileño, donde podrás disfrutar de actividades acuáticas, como buceo, y contemplar impresionantes vistas panorámicas",
+                "img":
+                  {
+                    "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_ACTIVIDADES_ARRIAL_DO_CABO_1500_LG.webp"
+                  }
+              }
+          ],
+        "description": "Río de Janeiro, la 'Ciudad Maravillosa' de Brasil, combina paisajes naturales impresionantes con una vibrante vida urbana. Sus playas icónicas, majestuosos picos y el famoso Carnaval ofrecen una experiencia llena de energía y cultura. Su gastronomía única y la calidez de los locales hacen de Río un destino inolvidable. Sumérgete en su vida nocturna, explora su historia y arquitectura fascinante, o simplemente relájate en sus playas de arena blanca. Río de Janeiro tiene todo para una experiencia emocionante y enriquecedora",
+        "gastronomies":
+          [
+            {
+              "name": "Feijoada",
+              "description": "El plato nacional de Brasil, una deliciosa mezcla de frijoles negros cocidos con carnes ahumadas como cerdo, chorizo y carne de res, servido con arroz, farofa (harina de yuca tostada) y naranjas",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_FEIJOADA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Pão de Queijo",
+              "description": "Panecillos de queso hechos con almidón de yuca y queso parmesano, esponjosos por dentro y crujientes por fuera, ideales para acompañar comidas o como snack",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_PAO_DE_QUEIJO_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Churrasco",
+              "description": "Parrilladas de carnes asadas a la brasa, como picanha (corte de carne de res), costillas, pollo y embutidos, servidas con guarniciones como farofa, arroz y frijoles",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_CHURRASCO_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Moqueca",
+              "description": "Un guiso de pescado o mariscos cocidos en leche de coco, aceite de dendê, tomates, cebollas y condimentos, servido con arroz y pirão (una especie de puré de pescado)",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_MOQUECA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Caipirinha",
+              "description": "La bebida emblemática de Brasil, hecha con cachaça (aguardiente de caña), lima, azúcar y hielo, refrescante y perfecta para acompañar comidas o disfrutar en la playa",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_CAIPIRINHA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Frutas Tropicales",
+              "description": "Disfruta de una amplia variedad de frutas frescas como mango, piña, papaya, maracuyá, guayaba y coco, ya sea en jugos naturales, batidos o postres como el açaí",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_FRUTAS_TROPICALES_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Coxinha",
+              "description": "Empanadillas de pollo desmenuzado y sazonado, envueltas en una masa suave y fritas hasta dorarse, un bocado delicioso y popular en Brasil",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_GASTRONOMIA_COXINHA_1500_LG.webp"
+                }
+            }
+          ],
+        "hotels":
+          [
+            {
+              "name": "Arena Copacabana",
+              "stars": { "$numberInt": "4" },
+              "description": "Este hotel se destaca por su ubicación frente a la famosa playa de Copacabana, ofreciendo a los huéspedes acceso directo a la arena y al mar. Con un estilo moderno, el hotel cuenta con habitaciones cómodas y bien equipadas, una piscina para relajarse, un restaurante con vistas al mar y una ubicación conveniente cerca de tiendas y restaurantes",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_HOTEL_ARENA_COPACABANA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Grand Mercure Rj Copacabana",
+              "stars": { "$numberInt": "4" },
+              "description": "Ubicado en el corazón de Copacabana, este hotel ofrece un ambiente elegante y servicios de alta calidad. Las amplias habitaciones están diseñadas para brindar comodidad y lujo, mientras que el spa, el gimnasio y el restaurante gourmet garantizan una experiencia de alojamiento completa y satisfactoria",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_HOTEL_GRAND_MERCURE_RJ_COPACABANA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Americas Copacabana",
+              "description": "Con una ubicación privilegiada a pocos pasos de la playa de Copacabana y la estación de metro, este hotel combina comodidad y conveniencia. Las habitaciones modernas y funcionales ofrecen todo lo necesario para una estancia agradable, mientras que la piscina, el bar en la azotea y el desayuno buffet agregan valor a la experiencia del huésped",
+              "stars": { "$numberInt": "4" },
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_HOTEL_AMERICAS_COPACABANA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Augustos Rio Copa",
+              "description": "Este hotel ofrece una opción más accesible en la zona de Copacabana, manteniendo un estándar de calidad en sus servicios y comodidades. Las habitaciones son sencillas pero confortables, el desayuno está incluido en la tarifa y el ambiente es acogedor y amigable, ideal para aquellos que buscan una estancia cómoda a un precio razonable",
+              "stars": { "$numberInt": "3" },
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_HOTEL_AUGUSTOS_RIO_COPA_1500_LG.webp"
+                }
+            },
+            {
+              "name": "Astoria Copacabana",
+              "stars": { "$numberInt": "3" },
+              "description": "Con una ubicación estratégica cerca de la playa y la estación de metro, este hotel tradicional brinda una experiencia auténtica en Río de Janeiro. Las habitaciones son funcionales y cómodas, el restaurante ofrece platos brasileños deliciosos y la terraza con vistas panorámicas es perfecta para relajarse y disfrutar del entorno",
+              "img":
+                {
+                  "lg": "/images/rio_de_janeiro/RIO_DE_JANEIRO_HOTEL_ASTORIA_COPACABANA_1500_LG.webp"
+                }
+            }
+          ],
+        "seasons":
+          [
+            {
+              "name": "Diciembre a Febrero (Verano)",
+              "description": "Esta temporada es ideal para quienes disfrutan del calor y las playas. Las temperaturas son altas, con máximas que suelen superar los 30°C. Es la temporada de mayor afluencia turística debido a las vacaciones escolares y festividades como el Carnaval en febrero",
+              "position": "left"
+            },
+            {
+              "name": "Marzo a Mayo (Otoño)",
+              "description": "Esta época ofrece temperaturas más moderadas, con máximas alrededor de los 25-28°C. Es un buen momento para visitar Río si prefieres evitar las multitudes de la temporada alta y disfrutar de un clima más agradable para explorar la ciudad y sus alrededores",
+              "position": "right"
+            },
+            {
+              "name": "Junio a Agosto (Invierno)",
+              "description": "Aunque es invierno en Río, las temperaturas siguen siendo suaves, con máximas alrededor de los 22-25°C. Es una buena temporada para quienes desean evitar el calor intenso y las lluvias, aunque puede haber algunos días frescos",
+              "position": "left"
+            },
+            {
+              "name": "Septiembre a Noviembre (Primavera)",
+              "description": "Esta temporada es similar al otoño en cuanto a temperaturas y clima agradable. Es un buen momento para visitar Río si prefieres evitar las multitudes y disfrutar de actividades al aire libre como caminatas y paseos por la ciudad",
+              "position": "right"
+            },
+            {
+              "description": "En resumen, la mejor época para visitar Río de Janeiro dependerá de tus preferencias en cuanto al clima y a la afluencia turística. Si te gusta el calor y la animación, el verano y el Carnaval son ideales. Si prefieres temperaturas más suaves y menos turistas, el otoño y la primavera son buenas opciones",
+              "position": "left"
+            }
+          ]
+      }
+    ],
+  "seo":
+    {
+      "title": "Ruta Mundial: BRASIL",
+      "description": "Sumérgete en la exuberancia de Brasil, desde la selva tropical del Amazonas  hasta las icónicas playas de Copacabana en Río de Janeiro . Disfruta de la música y la alegría que se respira en cada esquina , prueba la variedad de sabores de la cocina brasileña  y relájate en lujosos alojamientos frente al mar . ¡Brasil te espera con los brazos abiertos para vivir una experiencia única!"
+    }
+}
