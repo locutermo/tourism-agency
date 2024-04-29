@@ -1,96 +1,130 @@
 import { randomUUID } from "crypto"
+import Image from "next/image"
 import Link from "next/link"
 
-export default async function Footer(params){
+export default async function Footer(params) {
     let information = {
-        assistances : [
+        assistances: [
             {
-                title:"Contacto",
-                url:"/contacto"
+                title: "Política de protección de datos personales",
+                url: "/legal-info"
             },
             {
-                title:"Información legal",
-                url:"/legal-info"
+                title: "Código ESNNA",
+                url: "/esnna"
             },
             {
-                title:"Política de privacidad",
-                url:"/privacy-policy"
+                title: "Términos y condiciones",
+                url: "/terms-and-conditions"
             },
-            {
-                title:"Términos y condiciones generales",
-                url:"/terms-and-conditions"
-            },
-            {
-                title:"Información conforme a la Ley de servicios digitales",
-                url:"/digital-information"
-            }
+
         ],
-        company_informations : [
-            {
-                title:"Sobre nosotros",
-                url:"/about-us"
-            },
-            {
-                title:"Blog",
-                url:"/blog"
-            },
-            {
-                title:"Prensa",
-                url:"/prensa"
-            },
-            {
-                title:"Tarjetas de regalo",
-                url:"/gift-card"
-            }
-        ]
     }
 
-    
-    return (
-        <footer className="w-full h-80 bg-indigo-950 lg:px-32 md:px-16 sm:px-16 px-4 align-bottom  self-center">
-        <div className="w-full h-full flex flex-col justify-between">
-          <div className=" w-full h-3/4 pt-8 px-4 [&>ol]:text-white  [&>ol]:md:text-sm text-xs flex flex-col md:flex-row md:justify-between" >
-            <ol>
-                <li key={randomUUID()} className="font-bold">Asistencia</li>
-                {information.assistances.map( (assitance,index) => (
-                    <li key={index}><Link href={assitance.url}>{assitance.title}</Link></li>
-                ))}
-            </ol>
-            <br></br>
-            <ol>
-                <li key={randomUUID()} className="font-bold">Empresa</li>
-                {information.company_informations?.map( (info,index) => (
-                    <li key={index}><Link href={info.url}>{info.title}</Link></li>
-                ))}
-            </ol>
-          </div>
-          <div className=" w-full h-1/4 flex flex-row justify-between items-center px-4 md:text-sm  text-xs text-white">              
-              <p className="" >© 2024 Ruta Mundial, Creada en Perú</p>
-              <div className="flex flex-row space-x-4">
-            
-                <a href="#" target="_blank" >
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                    </svg>
-                </a>
-                <a href="#" target="_blank" >
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg>
-                </a>
-                <a href="#" target="_blank" >
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-5 md:w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                    </svg>
-                </a>
-              </div>
-          </div>
 
-        </div>
-      </footer>
+    return (
+        <footer className="w-full lg:flex-row h-fit flex flex-col-reverse">
+            <div className="bg-[#3245a4] w-full lg:w-10/12 flex flex-col">
+                <div className="md:px-16 sm:px-16 p-4 py-8  self-center h-full flex flex-col w-full md:flex-row ">
+                    <div className="w-full h-full flex flex-col items-start">
+                        <Link href="/" className="w-[199.82px] h-[35.83px] relative ">
+                            <Image
+                                src={"/logo_3.png"}
+                                className="md:block"
+                                alt="Logo de Ruta Mundial"
+                                sizes="100%"
+                                fill
+                            />
+                        </Link>
+                        <ul className="text-white [&>li>span]:font-bold [&>li]:space-x-2 text-xs md:text-sm lg:text-base py-6">
+                            <li>
+                                <label>Razón Social:</label>
+                                <span>RUTA MUNDIAL EIRL</span>
+                            </li>
+                            <li>
+                                <label>RUC:</label>
+                                <span>20612400491</span>
+                            </li>
+                        </ul>
+                        <ul className="text-white text-xs md:text-sm lg:text-base [&>li]:space-x-2 space-y-2 [&>li]:flex">
+                            <li>
+                                <label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                    </svg>
+
+
+                                </label>
+                                <span>Jr. Mercurio 7516, Los Olivos</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                                    </svg>
+
+                                </label>
+                                <span>+51 941 155 491</span>
+                            </li>
+                            <li>
+                                <label><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+                                </svg>
+                                </label>
+                                <span>info.rutamundial@gmail.com</span>
+                            </li>
+                            <div className="py-2 flex space-x-4">
+                                <a href={"https://www.instagram.com/_rutamundial"} target="__blank__" className="w-8 h-8 relative">
+                                    <Image src="/instagram.svg" fill sizes="100%" alt="Logo de Instagram" />
+                                </a>
+                                <a href={"https://www.facebook.com/RutaMundialViajes"} target="__blank__" className="w-8 h-8 relative">
+                                    <Image src="/facebook.svg" fill sizes="100%" alt="Logo de Facebook" />
+                                </a>
+                                <a href={"https://www.tiktok.com/@ruta.mundial"} target="__blank__" className="w-8 h-8 relative">
+                                    <Image src="/tiktok.svg" fill sizes="100%" alt="Logo de Tiktok" />
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                    <line className="border-1 border-2 md:mx-10 my-5 border-white"></line>
+                    <div className="w-full h-full flex flex-col items-start">
+                        <ul className=" space-y-2 text-white [&>li>span]:font-bold [&>li]:space-x-2 text-xs md:text-sm lg:text-base py-6">
+                            <li key={randomUUID()} className="font-bold">Asistencia</li>
+                            {information.assistances.map((assitance, index) => (
+                                <li key={index}><Link href={assitance.url}>{assitance.title}</Link></li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div className="md:px-16 sm:px-16 p-4 py-4 flex text-white text-sm">
+                    <p className="font-bold">© Ruta Mundial 2024, All Rights Reserved</p>
+                    <p >, Creado con ♡</p>
+                </div>
+            </div>
+            <div className="h-full flex lg:p-10 p-2 px-4 lg:space-y-6 bg-slate-100 lg:bg-white lg:flex-col justify-between lg:items-center lg:w-2/12 items-center ">
+                <figure className="h-28 w-28 lg:w-40 lg:h-40 relative ">
+                    <Image src="/images/turismo_responsable.webp" fill sizes="100%" alt="Logo de Turismo responsable" />
+                </figure>
+                <div className="text-center flex flex-col  h-full">
+                    <h3 className="text-[#3245a4] text-xs md:text-sm lg:text-base uppercase font-bold">Metodos de pago</h3>
+                    <div className="flex space-x-4 [&>div]:w-14 [&>div]:h-14 lg:[&>div]:w-16 lg:[&>div]:h-16  ">
+                        <div className="relative">
+                            <Image src="/visa.svg" fill sizes="100%" alt="Logo de Visa" />
+                        </div>
+                        <div className="relative">
+
+                            <Image src="/amex.svg" fill sizes="100%" alt="Logo de American Express" />
+                        </div>
+                        <div className="relative">
+                            <Image src="/mastercard.svg" fill sizes="100%" alt="Logo de Mastercard" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
     )
 }
 

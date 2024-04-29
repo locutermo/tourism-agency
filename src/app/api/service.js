@@ -85,3 +85,32 @@ export const getInternationalDestination = async (id) => {
     }
 }
 
+export const getNationalDestinations = async () => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("national-destination")
+            .find({})
+            .sort({ metacritic: -1 })
+            .toArray();
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}
+
+export const getNationalDestination = async (id) => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("national-destination")
+            .findOne({ _id: new ObjectId(id) })
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}

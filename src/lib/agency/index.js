@@ -35,3 +35,17 @@ export async function getInternationalDestination(id){
     const data = await res.json();
     return data?.body
 }
+
+export async function getNationalDestinations(tags,revalidate){
+    const res = await fetch(`${domain}/api/destinations/national`,
+    { next: { revalidate: revalidate || 1,tags:tags||[] } });
+    const data = await res.json();
+    return data?.body
+}
+
+export async function getNationalDestination(id){
+    const res = await fetch(`${domain}/api/destinations/national/${id}`,
+    { next: { revalidate: 1,tags:[] } });
+    const data = await res.json();
+    return data?.body
+}
