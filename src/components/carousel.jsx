@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Image from "next/image"
+import { rgbDataURL } from '@/lib/util'
 
 export default function Carousel({ items = [] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,6 +29,8 @@ export default function Carousel({ items = [] }) {
                 {items?.map((item, index) => (
                     <div key={index} className={`${index != currentIndex && 'hidden'} duration-700 ease-in-out`}>
                         <Image
+                            placeholder="blur"
+                            blurDataURL={rgbDataURL(161, 177, 255)}
                             alt={item.name}
                             src={item.img?.lg}
                             fill
@@ -37,7 +40,7 @@ export default function Carousel({ items = [] }) {
                         <div className="absolute z-30 w-full h-full left-0">
                             <div className="flex w-full md:w-2/3 lg:w-1/2 h-full px-10 md:px-20 lg:px-32 flex-col justify-center md:space-y-2">
                                 <div className="flex">
-                                    {[...showStars(item.stars)]} 
+                                    {[...showStars(item.stars)]}
                                 </div>
                                 <h1 className="text-white font-extrabold md:text-4xl lg:text-5xl py-1 md:py-0">{item.name}</h1>
                                 <p className="text-white text-xs md:text-base lg:text-sm">{item.description}</p>

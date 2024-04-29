@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Carousel from "@/components/carousel"
 import { useState } from "react"
+import { rgbDataURL } from '@/lib/util'
 
 
 const customPadding = 'p-12 md:p-14 lg:p-36 lg:px-60'
@@ -12,6 +13,8 @@ export default function HeaderDestination({ destination }) {
         <div className="relative w-full h-72 md:h-[500px] lg:min-h-screen ">
             <div className="absolute z-20 w-full bg-black  h-full left-0 opacity-40"></div>
             <Image
+                placeholder="blur"
+                blurDataURL={rgbDataURL(161, 177, 255)}
                 className="h-52"
                 alt={destination.name}
                 style={{ objectFit: "cover" }}
@@ -41,16 +44,21 @@ export default function HeaderDestination({ destination }) {
 
         {selected && (
             <div className="w-full space-y-6 flex flex-col md:flex-row p-12 md:p-14 lg:p-36 lg:px-60 md:space-x-8 lg:space-x-16">
-                <div className="relative md:w-1/2 min-h-52 md:min-h-72 ">
-                    <Image
-                        className="rounded-xl"
-                        alt={selected.nameç}
-                        src={selected?.img?.md}
-                        fill
-                        sizes="100%"
-                    ></Image>
+                <div className="border-4 rounded-xl  md:w-1/2 p-2 shadow-sm md:shadow-md lg:shadow-lg  shadow-[#4563ff]  w-full">
+                    <div className="relative w-full min-h-52 md:min-h-72 xl:h-[500px]">
+                        <Image
+                            placeholder="blur"
+                            blurDataURL={rgbDataURL(161, 177, 255)}
+                            className="rounded-xl"
+                            alt={selected.nameç}
+                            src={selected?.img?.md}
+                            fill
+                            sizes="100%"
+                        ></Image>
+                    </div>
                 </div>
-                <p className="md:w-1/2 text-xs lg:text-sm">{selected.description}</p>
+
+                <p className="md:w-1/2 text-xs lg:text-base">{selected.description}</p>
             </div>
         )}
         {selected.activities?.length > 0 && (
@@ -82,7 +90,7 @@ export default function HeaderDestination({ destination }) {
             </g>
         </svg>
         {selected.seasons?.length > 0 && (
-            <div className={`flex flex-col ${customPadding}`}>
+            <div className={`flex flex-col ${customPadding} min-h-screen`}>
 
                 <h2 className="py-8 text-xl md:text-2xl uppercase font-extrabold text-[#3245a4]">Temporadas</h2>
                 <div className="w-full flex flex-col">
@@ -104,7 +112,7 @@ export default function HeaderDestination({ destination }) {
 const getDescription = (text) => {
     if (text.includes("-")) {
         return (<ul>
-            {text.split("-").filter(e => e != "").map((item ,index)=> (
+            {text.split("-").filter(e => e != "").map((item, index) => (
                 <li key={index} className="text-xs md:text-sm">
                     <p>{item}</p>
                 </li>

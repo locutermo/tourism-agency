@@ -1,3 +1,5 @@
+import { rgbDataURL } from '@/lib/util'
+
 export default async function HeaderMedia() {
 
     return <section className="w-full h-auto  self-center">
@@ -14,7 +16,9 @@ export default async function HeaderMedia() {
                 </div>
             </div>
 
-            <video autoPlay muted loop playsInline loading="eager" className="w-full max-h-full relative">
+            <video autoPlay muted loop playsInline loading="eager" className="w-full max-h-full relative" placeholder="blur"
+                blurDataURL={rgbDataURL(161, 177, 255)}>
+
                 <source src="/videos/ciudad_2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
 

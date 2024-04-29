@@ -43,3 +43,7 @@ body {
   filter: drop-shadow(0 0 0 rgba(142, 103, 103, 0.5));
   mask-image: linear-gradient(to right, rgb(18, 2, 2) 50%, transparent 100%);
 }
+
+.custom-radius{
+  border-radius: 91% 9% 91% 9% / 23% 81% 19% 77%   ;
+}
