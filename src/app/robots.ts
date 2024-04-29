@@ -6,10 +6,11 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: '*'
+        userAgent: '*',
+        allow: '/',
+        disallow: '/api/',
       }
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl
+    sitemap: `${baseUrl}/sitemap.xml`
   };
 }
