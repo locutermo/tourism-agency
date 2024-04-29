@@ -2,7 +2,7 @@ import Image from "next/image";
 const customPadding = 'p-8 md:p-14 lg:p-36 lg:px-60'
 
 export default function AboutUs(props) {
-    return <section className="w-full h-auto">
+    return <section id="aboutus" className="w-full h-auto">
         <div className="relative w-full h-96 md:h-[500px] lg:min-h-screen">
             <div className="absolute w-full h-full z-20 bg-gray-200 opacity-20">
                 <Image
@@ -16,7 +16,7 @@ export default function AboutUs(props) {
             <div className={`${customPadding} absolute w-full h-full pb-20 z-30`}>
                 <div className="flex justify-center flex-col h-full">
                     <h2 className="text-xl text-[#4563ff] md:text-3xl lg:text-6xl font-bold py-2 md:py-8">NOSOTROS</h2>
-                    <div class="lg:w-1/2  text-[#3245a4] mb-4 md:mb-8 text-xs md:text-base">
+                    <div className="lg:w-1/2  text-[#3245a4] mb-4 md:mb-8 text-xs md:text-base">
                         <p>Somos una agencia de viajes que nace con la pasión de hacer realidad tus sueños de aventura y descubrimiento</p>
                         <br></br>
                         <p>Nuestro objetivo es convertir cada viaje en una experiencia inolvidable, ofreciendo opciones para todos los gustos y presupuestos. Queremos inspirarte a explorar nuevos horizontes, conocer culturas fascinantes y crear recuerdos que perduren toda la vida.</p>
