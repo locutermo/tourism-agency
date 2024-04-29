@@ -11,7 +11,8 @@ export default async function Home(props) {
         <HeaderMedia />
       </Suspense>
       <InternationalSection />
-     
+      <NationalSection />
+      <AboutUs />
 
     </main>
   );
