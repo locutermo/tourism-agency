@@ -9,7 +9,7 @@ import SessionWrapper from "@/components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ruta Mundial - Agencia de viajes",
+  title: "Ruta Mundial - Agencia de viajes | LIMA - PERÚ",
   description: "Descubre destinos internacionales (Mexico, Punta Cana, Brasil, Argentina, Colombia, Europa) y nacionales con Ruta Mundial. Paquetes turísticos personalizados con vuelos, alojamiento en hoteles de lujo, tours y seguros de viaje. ¡Reserva ahora y disfruta de la atención personalizada de nuestro equipo de expertos",
 };
 
