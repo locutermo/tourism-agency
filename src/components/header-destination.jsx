@@ -4,6 +4,7 @@ import Carousel from "@/components/carousel"
 import { useState } from "react"
 import { rgbDataURL } from '@/lib/util'
 
+import WhatsappButton from '@/components/whatsapp-button'
 
 const customPadding = 'p-12 md:p-14 lg:p-36 lg:px-60'
 
@@ -44,7 +45,7 @@ export default function HeaderDestination({ destination }) {
 
         {selected && (
             <div className="w-full space-y-6 flex flex-col md:flex-row p-12 md:p-14 lg:p-36 lg:px-60 md:space-x-8 lg:space-x-16">
-                <div className="border-4 rounded-xl  md:w-1/2 p-2 shadow-sm md:shadow-md lg:shadow-lg  shadow-[#4563ff]  w-full">
+                <div className="border-4 rounded-xl  md:w-1/2 p-2 shadow-sm md:shadow-md lg:shadow-lg  shadow-[#4563ff]  w-full space-y-5 flex flex-col items-center">
                     <div className="relative w-full min-h-52 md:min-h-72 xl:h-[500px]">
                         <Image
                             placeholder="blur"
@@ -56,6 +57,7 @@ export default function HeaderDestination({ destination }) {
                             sizes="100%"
                         ></Image>
                     </div>
+                    <WhatsappButton number="941155491" className="text-secondary p-2" message={`Hola, me gustaría cotizar un paquete para ${selected.name}`}>Solicitar paquete aqui</WhatsappButton>
                 </div>
 
                 <p className="md:w-1/2 text-xs lg:text-base">{selected.description}</p>

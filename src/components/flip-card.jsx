@@ -18,7 +18,7 @@ export const FlipCard = ({ name, description, img, flag, size }) => {
                 <div className="flex min-h-full flex-col items-center justify-center">
                     <h2 className="text-3xl font-bold h-1/2 w-full ">{name}</h2>
                     <p className="text-xs my-1 md:my-3 md:text-sm lg:text-base overflow-x-auto text-ellipsis h-[90px] md:h-[140px]">{description}</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-2 hover:bg-neutral-900">Solicitar cotización</button>
+                    <a className="mt-2 rounded-md bg-neutral-800 py-1 px-2 hover:bg-neutral-900" href={`https://api.whatsapp.com/send?phone=${"941155491"}&text="Hola, me gustaría viajar a ${name}, me podría brindar más información sobre los paquetes disponibles"`} target='__blank__'>Solicitar cotización</a>
                 </div>
 
             </div>

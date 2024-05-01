@@ -24,7 +24,7 @@ export default async function Footer(params) {
 
     return (
         <footer className="w-full lg:flex-row h-fit flex flex-col-reverse">
-            <div className="bg-[#3245a4] w-full lg:w-10/12 flex flex-col">
+            <div className="bg-primary w-full lg:w-10/12 flex flex-col">
                 <div className="md:px-16 sm:px-16 p-4 py-8  self-center h-full flex flex-col w-full md:flex-row ">
                     <div className="w-full h-full flex flex-col items-start">
                         <Link href="/" className="w-[199.82px] h-[35.83px] relative ">

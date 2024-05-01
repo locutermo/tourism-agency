@@ -1,0 +1,1 @@
+export const MESSAGE_WHATSAPP = "Hola me gustaría más información sobre los paquetes de viajes de Ruta Mundial"
