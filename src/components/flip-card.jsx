@@ -16,7 +16,7 @@ export const FlipCard = ({ name, description, img, flag, size }) => {
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl px-12 text-center bg-black/40 text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                 <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold h-1/2 w-full ">{name}</h1>
+                    <h2 className="text-3xl font-bold h-1/2 w-full ">{name}</h2>
                     <p className="text-xs my-1 md:my-3 md:text-sm lg:text-base overflow-x-auto text-ellipsis h-[90px] md:h-[140px]">{description}</p>
                     <button className="mt-2 rounded-md bg-neutral-800 py-1 px-2 hover:bg-neutral-900">Solicitar cotización</button>
                 </div>
