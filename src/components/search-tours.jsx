@@ -1,5 +1,4 @@
 'use client'
-import Button from './button'
 import React, { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 export default function SearchTours(props) {
@@ -19,7 +18,6 @@ export default function SearchTours(props) {
         <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
       </svg>
       <input className="focus:outline-none w-full text-xs md:text-sm bg-transparent" onChange={(event) => { setSearch(event.target.value) }} placeholder="Buscar"></input>
-      <Button className="md:block hidden" onClick={(event) => { setSearch(event.target.value) }}>Buscar</Button>
     </div>
     <Datepicker
       containerClassName="relative w-6/12 md:w-4/12 text-gray-700 md:border-2 rounded-full "

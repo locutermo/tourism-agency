@@ -1,4 +1,4 @@
 import InfoCard from './info-card'
-import Button from './button'
+import WhatsappButton from './whatsapp-button'
 
-export {InfoCard,Button}
+export {InfoCard,WhatsappButton}
