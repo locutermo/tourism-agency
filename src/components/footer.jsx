@@ -6,8 +6,8 @@ export default async function Footer(params) {
     let information = {
         assistances: [
             {
-                title: "Política de protección de datos personales",
-                url: "/legal-info"
+                title: "Política de privacidad y protección de datos",
+                url: "/privacy"
             },
             {
                 title: "Código ESNNA",
