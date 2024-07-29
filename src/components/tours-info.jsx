@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useState,useEffect } from "react";
-import {Button,InfoCard} from "@/components"
+import {InfoCard} from "@/components"
 
 export function ToursInfo(props){
 

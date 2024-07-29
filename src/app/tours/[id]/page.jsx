@@ -1,4 +1,3 @@
-import { Button } from "@/components"
 import Image from "next/image"
 import ItinerarySteps from "@/components/itinerary-steps"
 import FloatingButton from "@/components/floating-button"
@@ -97,7 +96,6 @@ export default async function Page({ params }) {
                             <h2 className="font-bold md:text-xl text-xs">{tour.currency} {tour.price}</h2>
                             <p className="text-xs text-gray-700">por persona</p>
                         </div>
-                        <Button>Ver disponibilidad</Button>
                     </div>
                 </div>
             </section>

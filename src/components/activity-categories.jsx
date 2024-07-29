@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button,InfoCard} from "@/components"
+import {InfoCard} from "@/components"
 import {getCategories} from '@/lib/agency'
 
 export default async function ActivityCategories(props){
