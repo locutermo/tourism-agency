@@ -49,3 +49,10 @@ export async function getNationalDestination(id){
     const data = await res.json();
     return data?.body
 }
+
+export async function getOpinions(tags,revalidate){
+    const res = await fetch(`${domain}/api/opinions`,
+    { next: { revalidate: revalidate || 3600,tags:tags||[] } });
+    const data = await res.json();
+    return data?.body
+}

@@ -101,6 +101,7 @@ export const getNationalDestinations = async () => {
     }
 }
 
+
 export const getNationalDestination = async (id) => {
     try{
         const client = await clientPromise;
@@ -108,6 +109,22 @@ export const getNationalDestination = async (id) => {
         const data = await db
             .collection("national-destination")
             .findOne({ _id: new ObjectId(id) })
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}
+
+export const getOpinions = async () => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("opinions")
+            .find({})
+            .sort({ metacritic: -1 })
+            .toArray();
         return data;
     } catch (e) {
         console.error(e);

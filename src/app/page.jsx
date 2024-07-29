@@ -3,6 +3,7 @@ import HeaderMedia from "@/components/header-media";
 import InternationalSection from "@/components/international-section";
 import NationalSection from "@/components/national-section";
 import AboutUs from '@/components/about-us';
+import OpinionSection from '@/components/opinion-section';
 export default async function Home(props) {
 
   return (
@@ -13,6 +14,7 @@ export default async function Home(props) {
       <InternationalSection />
       <NationalSection />
       <AboutUs />
+      <OpinionSection/>
 
     </main>
   );
