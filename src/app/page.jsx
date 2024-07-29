@@ -14,7 +14,6 @@ export default async function Home(props) {
       <InternationalSection />
       <NationalSection />
       <AboutUs />
-      <OpinionSection/>
 
     </main>
   );
