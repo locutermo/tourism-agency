@@ -5,10 +5,10 @@ export default function TourCard({item}){
     return (
     <div className="w-full h-96 rounded-md cursor-pointer flex flex-col">
         <div className="relative w-full h-1/2">
-            <dir className={`label absolute top-1 left-2 bg-black w-16 p-1 rounded-sm h-4 z-10 `} >
+            <div className={`label absolute top-1 left-2 bg-black w-16 p-1 rounded-sm h-4 z-10 `} >
                 {/* Por revisar */}
                 <span className='absolute top-0 left-0 text-white text-xs text-center w-full'>Top pick</span>
-            </dir>
+            </div>
             <Image placeholder="blur"  
                 blurDataURL={rgbDataURL(237,181,6)} 
                 src={url} 
