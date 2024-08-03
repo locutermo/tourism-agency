@@ -16,7 +16,7 @@ export async function generateMetadata({params}) {
       keywords: "agencia de viajes en lima, agencia de viajes, ofertas a punta cana, paquetes turisticos, ofertas a cartagena, paquetes internacionales, mejor agencia de viajes en peru, asesoria personalizada en viajes",
       openGraph: {
         title:"Ruta Mundial ! Agencia de Viajes - Lima, Perú",
-        description:"Ingresa y revisa cotiza con nosotros para tu próximo viaje soñado",
+        description:"Ingresa y cotiza con nosotros para tu próximo viaje soñado",
         images: ['/images/punta_cana/PUNTA_CANA_ACTIVIDADES_ISLA_SAONA_1500_lg.webp'],
       }
     }
