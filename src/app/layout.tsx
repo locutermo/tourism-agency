@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/header'
@@ -9,8 +9,13 @@ import SessionWrapper from "@/components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ruta Mundial - Agencia de viajes | LIMA - PERÚ",
-  description: "Descubre destinos internacionales (Mexico, Punta Cana, Brasil, Argentina, Colombia, Europa) y nacionales. Ofrecemos paquetes turísticos personalizados con vuelos, alojamiento en hoteles de lujo, tours y seguros de viaje. ¡Reserva ahora y disfruta de la atención personalizada de nuestro equipo de expertos",
+  title: {
+    template: '%s | Agencia de viajes | LIMA - PERÚ',
+    default:"Ruta Mundial"
+  },
+  description: "Agencia de Viajes Digital ubicado en Lima Perú con agentes especializados en brindar atención personalizada para ayudarte a disfrutar tus vacaciones",
+
+  
 };
 
 
