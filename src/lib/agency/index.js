@@ -56,3 +56,10 @@ export async function getOpinions(tags,revalidate){
     const data = await res.json();
     return data?.body
 }
+
+export async function getPromotions(tags,revalidate){
+    const res = await fetch(`${domain}/api/promotions`,
+    { next: { revalidate: revalidate || 3600,tags:tags||[] } });
+    const data = await res.json();
+    return data?.body
+}

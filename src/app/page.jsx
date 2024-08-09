@@ -4,7 +4,7 @@ import InternationalSection from "@/components/international-section";
 import NationalSection from "@/components/national-section";
 import AboutUs from '@/components/about-us';
 import OpinionSection from '@/components/opinion-section';
-
+import PromotionSection from '@/components/promotion-section';
 
 export async function generateMetadata({params}) {
 
@@ -30,6 +30,7 @@ export default async function Home(props) {
       <Suspense fallback={<p>Cargando...</p>}>
         <HeaderMedia />
       </Suspense>
+      <PromotionSection/>
       <InternationalSection />
       <NationalSection />
       <AboutUs />

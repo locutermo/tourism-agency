@@ -63,6 +63,13 @@ export default function HeaderDestination({ destination }) {
                 <p className="md:w-1/2 text-xs lg:text-base">{selected.description}</p>
             </div>
         )}
+
+        {selected.hotels?.length > 0 && (
+            <CarouselContainer title="Hoteles">
+                <Carousel items={selected.hotels} />
+            </CarouselContainer>
+        )}
+
         {selected.activities?.length > 0 && (
             <CarouselContainer title="Actividades Turísticas">
                 <Carousel items={selected.activities} />
@@ -74,11 +81,6 @@ export default function HeaderDestination({ destination }) {
             </CarouselContainer>
         )}
 
-        {selected.hotels?.length > 0 && (
-            <CarouselContainer title="Hoteles">
-                <Carousel items={selected.hotels} />
-            </CarouselContainer>
-        )}
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2400 800">
             <defs>
                 <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="sssurf-grad">

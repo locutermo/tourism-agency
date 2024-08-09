@@ -131,3 +131,19 @@ export const getOpinions = async () => {
         return null
     }
 }
+
+export const getPromotions = async () => {
+    try{
+        const client = await clientPromise;
+        const db = client.db(process.env.MONGODB_DATABASE);
+        const data = await db
+            .collection("promotions")
+            .find({})
+            .sort({ metacritic: -1 })
+            .toArray();
+        return data;
+    } catch (e) {
+        console.error(e);
+        return null
+    }
+}
