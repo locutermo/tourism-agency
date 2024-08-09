@@ -17,14 +17,18 @@ export default async function Footer(params) {
                 title: "Términos y condiciones",
                 url: "/terms-and-conditions"
             },
+            {
+                title: "Constancia de MINCETUR",
+                url: "/mincetur"
+            },
 
         ],
     }
 
 
     return (
-        <footer className="w-full lg:flex-row h-fit flex flex-col-reverse">
-            <div className="bg-primary w-full lg:w-10/12 flex flex-col">
+        <footer className="w-full h-fit flex flex-col-reverse">
+            <div className="bg-primary w-full  flex flex-col">
                 <div className="md:px-16 sm:px-16 p-4 py-8  self-center h-full flex flex-col w-full md:flex-row ">
                     <div className="w-full h-full flex flex-col items-start">
                         <Link href="/" className="w-[199.82px] h-[35.83px] relative ">
@@ -88,7 +92,7 @@ export default async function Footer(params) {
                         </ul>
                     </div>
                     <line className="border-1 border-2 md:mx-10 my-5 border-white"></line>
-                    <div className="w-full h-full flex flex-col items-start">
+                    <div className="w-full h-full flex flex-col items-start lg:items-end md:text-right">
                         <ul className=" space-y-2 text-white [&>li>span]:font-bold [&>li]:space-x-2 text-xs md:text-sm lg:text-base py-6">
                             <li key={randomUUID()} className="font-bold">Asistencia</li>
                             {information.assistances.map((assitance, index) => (
@@ -102,11 +106,16 @@ export default async function Footer(params) {
                     <p >, Creado con ♡</p>
                 </div>
             </div>
-            <div className="h-full flex lg:p-10 p-2 px-4 lg:space-y-6 bg-slate-100 lg:bg-white lg:flex-col justify-between lg:items-center lg:w-2/12 items-center ">
-                <figure className="h-28 w-28 lg:w-40 lg:h-40 relative ">
-                    <Image src="/images/turismo_responsable.webp" fill sizes="100%" alt="Logo de Turismo responsable" />
-                </figure>
-                <div className="text-center flex flex-col  h-full">
+            <div className="h-full flex p-2 px-4 md:px-6 lg:space-y-6 bg-slate-100 flex-col md:flex-row justify-between items-center ">
+                <div className="flex items-center">
+                    <figure className="h-28 w-28 lg:w-40 lg:h-40 relative ">
+                        <Image src="/images/turismo_responsable.webp" fill sizes="100%" alt="Logo de Turismo responsable" />
+                    </figure>
+                    <figure className="h-24 w-56  lg:w-72 lg:h-32 relative ">
+                        <Image src="/images/distintivo_agencia_registrada.webp" fill sizes="100%" alt="Distintivo de Agencia registrada en MINCETUR" />
+                    </figure>
+                </div>
+                <div className="text-center flex flex-col my-10 h-full">
                     <h3 className="text-[#3245a4] text-xs md:text-sm lg:text-base uppercase font-bold">Metodos de pago</h3>
                     <div className="flex space-x-4 [&>div]:w-14 [&>div]:h-14 lg:[&>div]:w-16 lg:[&>div]:h-16  ">
                         <div className="relative">

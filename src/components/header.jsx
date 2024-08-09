@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function Header(params) {
   const [showBackground, setShowBackground] = useState(false)
   const [showInfo, setShowInfo] = useState(false)
-  const TOP_OFFSET = 50;
+  const TOP_OFFSET = 10;
   const pathname = usePathname();
   const isHome = pathname === "/"
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function Header(params) {
   }, []);
 
   return (
-    <header className={`sticky z-50 border-b-2 border-gray top-0 w-full h-12 self-center md:h-20 ${showBackground && " transition-colors bg-primary duration-700"}`}>
+    <header className={`sticky z-50 border-b-2 border-gray top-0 w-full h-12 self-center md:h-20 ${showBackground && " transition-colors bg-primary duration-400"}`}>
       <div className="w-full z-30 h-full">
         {/* Desktop */}
         <div className="hidden lg:flex justify-between h-full items-center  w-full  px-8 md:px-20 lg:px-32 z-40">

@@ -11,7 +11,7 @@ export default async function PromotionsSection({ ...restProps }) {
         <h2 className="text-sm md:text-base text-center pb-14 py-4 text-primary">Aprovecha nuestras promociones con los mejores precios para que viajes por el Caribe</h2>
         <div className="flex gap-4 justify-center flex-col md:flex-row" >
             {promotions?.map((promotion, index) => (
-                <PromotionCard {...promotion} 
+                <PromotionCard key={promotion._id} {...promotion} 
                     number={NUMBER_AGENCY_WHATSAPP} 
                     message={`${MESSAGE_WHATSAPP_PROMOTION} ${promotion.place} a ${promotion.price_currency}`}
                 />
