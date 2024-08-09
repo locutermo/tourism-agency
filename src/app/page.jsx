@@ -30,10 +30,11 @@ export default async function Home(props) {
       <Suspense fallback={<p>Cargando...</p>}>
         <HeaderMedia />
       </Suspense>
+      <AboutUs />
+
       <PromotionSection/>
       <InternationalSection />
       <NationalSection />
-      <AboutUs />
       <OpinionSection/>
 
     </main>

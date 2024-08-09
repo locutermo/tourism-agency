@@ -47,6 +47,7 @@ export default function Header(params) {
 
           </Link>
           <div className="flex gap-8">
+            <NavLink name="Promociones" className={`${!isHome && 'hidden'}`} showBackground={showBackground} isHome url="#promotions" />
             <NavLink name="Destinos Internacionales" className={`${!isHome && 'hidden'}`} showBackground={showBackground} isHome url="#international-destination" />
             <NavLink name="Destinos Nacionales" className={`${!isHome && 'hidden'}`} url="#national-destination" isHome showBackground={showBackground} />
             <NavLink name="Nosotros" url="#aboutus" className={`${!isHome && 'hidden'}`} showBackground={showBackground} />
@@ -99,7 +100,7 @@ export default function Header(params) {
         </div>
         {/* Detail Mobile */}
         <div className={`${(!showInfo || !showBackground) && 'hidden'} lg:hidden w-full py-4 h-auto sticky  transition-colors bg-[#3245a4] text-center duration-700 grid grid-cols-2 md:grid-cols-4 `}>
-          <NavLink show name="Contacto" url="/contact" showBackground />
+          <NavLink show name="Promociones" url="#promotions" showBackground />
           <NavLink show name="Nosotros" url="#aboutus" showBackground />
           <NavLink show name="Destinos Internacionales" url="#international-destination" showBackground />
           <NavLink show name="Destinos Nacionales" url="#national-destination" showBackground />

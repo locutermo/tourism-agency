@@ -11,8 +11,8 @@ export default async function HeaderMedia() {
             <div className="flex w-full lg:w-1/2  h-full px-8 md:px-20 lg:px-32 flex-col justify-center lg:items-start items-center text-center lg:text-start">
                 <h2 className="text-primary text-lg md:text-1xl lg:text-4xl font-black ">VIVE UNA NUEVA</h2>
                 <h2 className="text-primary text-3xl mb-2 md:text-4xl lg:text-7xl font-black ">EXPERIENCIA</h2>
-                <h1 className="text-primary text-[12px] md:text-sm lg:text-base ">Descubre destinos internacionales (Mexico, Punta Cana, Brasil, Argentina, Colombia, Europa) y nacionales. Paquetes turísticos personalizados con vuelos, alojamiento en hoteles de lujo, tours y seguros de viaje.</h1>
-                <p className="text-primary text-xs md:text-sm lg:text-base font-bold md:text-start mt-2 mb-8">¡Reserva ahora y disfruta de la atención personalizada de nuestro equipo de expertos</p>
+                <h1 className="text-primary my-4 lg:my-2 text-sm lg:text-base ">Descubre destinos internacionales (Mexico, Punta Cana, Brasil, Argentina, Colombia, Europa) y nacionales. Paquetes turísticos personalizados con vuelos, alojamiento en hoteles de lujo, tours y seguros de viaje.</h1>
+                <p className="text-primary text-sm lg:text-base font-bold md:text-start mt-2 mb-8">¡Reserva ahora y disfruta de la atención personalizada de nuestro equipo de expertos</p>
                 <WhatsappButton number="941155491" message={MESSAGE_WHATSAPP}>Solicita tu paquete aqui</WhatsappButton>
             </div>
             <div className="w-full h-auto lg:w-1/2 items-center flex justify-center">
