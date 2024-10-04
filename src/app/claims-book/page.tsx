@@ -3,16 +3,16 @@ import { useState } from "react";
 
 export default function ComplaintForm() {
   const [formData, setFormData] = useState({
-    firstName: "jose mateo",
-    lastName: "carrasco",
+    firstName: "",
+    lastName: "",
     documentType: "DNI",
-    documentNumber: "77041708",
-    email: "josemateoc20@gmail.com",
-    phone: "96223",
-    serviceName: "Paquete",
+    documentNumber: "",
+    email: "",
+    phone: "",
+    serviceName: "",
     travelDate: "",
-    claimType: "Queja",
-    message: "Queja porque si quiero",
+    claimType: "",
+    message: "",
     acceptPolicy: false,
   });
 
