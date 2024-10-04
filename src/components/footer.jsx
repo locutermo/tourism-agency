@@ -21,7 +21,10 @@ export default async function Footer(params) {
                 title: "Constancia de MINCETUR",
                 url: "/mincetur"
             },
-
+            {
+                title: "Libro de Reclamaciones",
+                url: "/claims-book"
+            },
         ],
     }
 
