@@ -1,55 +1,76 @@
-'use client'
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 export default function ComplaintForm() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    documentType: 'DNI',
-    documentNumber: '',
-    email: '',
-    phone: '',
-    serviceName: '',
-    travelDate: '',
-    claimType: '',
-    message: '',
-    acceptPolicy: false
+    firstName: "",
+    lastName: "",
+    documentType: "DNI",
+    documentNumber: "",
+    email: "",
+    phone: "",
+    serviceName: "",
+    travelDate: "",
+    claimType: "",
+    message: "",
+    acceptPolicy: false,
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value, type } = e.target;
-    if (type === 'checkbox') {
-      const target = e.target as HTMLInputElement; 
+    if (type === "checkbox") {
+      const target = e.target as HTMLInputElement;
       setFormData({
         ...formData,
-        [name]: target.checked
+        [name]: target.checked,
       });
     } else {
       setFormData({
         ...formData,
-        [name]: value
+        [name]: value,
       });
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Manejo del envío del formulario
-    alert("Enviando reclamo")
-    console.log(formData);
+    const response = await fetch("/api/claims", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    console.log({response,result})
+    if (response.ok) {
+      alert("Reclamo enviado, espere la respuesta por correo");
+    } else {
+      console.error("Error:", result);
+    }
   };
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white lg:my-10">
-      <h1 className="text-3xl font-bold text-center mb-4">Libro de Reclamaciones</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">
+        Libro de Reclamaciones
+      </h1>
       <p className="text-center mb-8">
-        Lamentamos lo sucedido. En este formulario podrá registrar su queja o reclamo.
+        Lamentamos lo sucedido. En este formulario podrá registrar su queja o
+        reclamo.
       </p>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Primera Parte del Formulario */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block font-semibold" htmlFor="firstName">Nombre*</label>
+            <label className="block font-semibold" htmlFor="firstName">
+              Nombre*
+            </label>
             <input
               id="firstName"
               name="firstName"
@@ -61,7 +82,9 @@ export default function ComplaintForm() {
             />
           </div>
           <div>
-            <label className="block font-semibold" htmlFor="lastName">Apellido*</label>
+            <label className="block font-semibold" htmlFor="lastName">
+              Apellido*
+            </label>
             <input
               id="lastName"
               name="lastName"
@@ -76,7 +99,9 @@ export default function ComplaintForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block font-semibold" htmlFor="documentType">Tipo de documento*</label>
+            <label className="block font-semibold" htmlFor="documentType">
+              Tipo de documento*
+            </label>
             <select
               id="documentType"
               name="documentType"
@@ -87,11 +112,15 @@ export default function ComplaintForm() {
             >
               <option value="DNI">DNI</option>
               <option value="Pasaporte">Pasaporte</option>
-              <option value="Carnet de extranjería">Carnet de extranjería</option>
+              <option value="Carnet de extranjería">
+                Carnet de extranjería
+              </option>
             </select>
           </div>
           <div>
-            <label className="block font-semibold" htmlFor="documentNumber">N° de documento*</label>
+            <label className="block font-semibold" htmlFor="documentNumber">
+              N° de documento*
+            </label>
             <input
               id="documentNumber"
               name="documentNumber"
@@ -106,7 +135,9 @@ export default function ComplaintForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block font-semibold" htmlFor="email">Correo electrónico*</label>
+            <label className="block font-semibold" htmlFor="email">
+              Correo electrónico*
+            </label>
             <input
               id="email"
               name="email"
@@ -118,7 +149,9 @@ export default function ComplaintForm() {
             />
           </div>
           <div>
-            <label className="block font-semibold" htmlFor="phone">Teléfono*</label>
+            <label className="block font-semibold" htmlFor="phone">
+              Teléfono*
+            </label>
             <input
               id="phone"
               name="phone"
@@ -135,7 +168,9 @@ export default function ComplaintForm() {
         <h2 className="text-xl font-semibold mb-4">2. Detalle de Reclamo</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block font-semibold" htmlFor="serviceName">Nombre del servicio / Paquete / Tours*</label>
+            <label className="block font-semibold" htmlFor="serviceName">
+              Nombre del servicio / Paquete / Tours*
+            </label>
             <input
               id="serviceName"
               name="serviceName"
@@ -147,7 +182,9 @@ export default function ComplaintForm() {
             />
           </div>
           <div>
-            <label className="block font-semibold" htmlFor="travelDate">Fecha del viaje*</label>
+            <label className="block font-semibold" htmlFor="travelDate">
+              Fecha del viaje*
+            </label>
             <input
               id="travelDate"
               name="travelDate"
@@ -166,7 +203,7 @@ export default function ComplaintForm() {
               type="radio"
               name="claimType"
               value="Queja"
-              checked={formData.claimType === 'Queja'}
+              checked={formData.claimType === "Queja"}
               onChange={handleChange}
               className="mr-2"
             />
@@ -177,7 +214,7 @@ export default function ComplaintForm() {
               type="radio"
               name="claimType"
               value="Reclamo"
-              checked={formData.claimType === 'Reclamo'}
+              checked={formData.claimType === "Reclamo"}
               onChange={handleChange}
               className="mr-2"
             />
@@ -186,7 +223,9 @@ export default function ComplaintForm() {
         </div>
 
         <div>
-          <label className="block font-semibold" htmlFor="message">Mensaje*</label>
+          <label className="block font-semibold" htmlFor="message">
+            Mensaje*
+          </label>
           <textarea
             id="message"
             name="message"
@@ -212,12 +251,15 @@ export default function ComplaintForm() {
             Declaro haber leído y acepto las Políticas de Privacidad.
           </label>
         </div>
-        <div className='flex flex-col space-y-5 text-gray-500'>
+        <div className="flex flex-col space-y-5 text-gray-500">
           <span>
-            (*) Todos nuestros procedimientos están basados en el manual de protección del consumidor y el manual de uso del libro de reclamaciones
+            (*) Todos nuestros procedimientos están basados en el manual de
+            protección del consumidor y el manual de uso del libro de
+            reclamaciones
           </span>
           <span>
-          (*) La respuesta a este reclamo o queja será enviada al e-mail indicado en este formulario
+            (*) La respuesta a este reclamo o queja será enviada al e-mail
+            indicado en este formulario
           </span>
         </div>
 
