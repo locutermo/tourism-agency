@@ -33,7 +33,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
       <div className="h-[25%] p-4 bg-gray-50 flex flex-col justify-between">
         <div className="flex-1 mb-2">
-          <p className="text-gray-700 text-xs leading-tight line-clamp-3">"{testimonial.message}"</p>
+          <p className="text-gray-700 text-xs leading-tight line-clamp-3">{testimonial.message}</p>
         </div>
 
         <div>
