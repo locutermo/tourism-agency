@@ -3,7 +3,7 @@ import HeaderMedia from "@/components/header-media";
 import InternationalSection from "@/components/international-section";
 import NationalSection from "@/components/national-section";
 import AboutUs from '@/components/about-us';
-import OpinionSection from '@/components/opinion-section';
+import OpinionSection, { TestimonialsSection } from '@/components/opinion-section';
 import PromotionSection from '@/components/promotion-section';
 
 export async function generateMetadata({params}) {
@@ -35,7 +35,7 @@ export default async function Home(props) {
       <PromotionSection/>
       <InternationalSection />
       <NationalSection />
-      <OpinionSection/>
+      <TestimonialsSection/>
 
     </main>
   );
