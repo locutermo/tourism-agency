@@ -11,7 +11,7 @@ const testimonials = [
     location: "Punta Cana",
     origin: "Cajamarca", // Added origin cities for each person
     message:
-      "Agradezco a la señorita Thalía por su excelente atención y seguimiento constante durante nuestro viaje. Mi mamá y yo quedamos muy contentas con la experiencia brindada.",
+      "La señorita Rut nos brindó una excelente orientación en cada etapa de nuestro viaje, asegurándose de que no tuviéramos ningún inconveniente. Siempre estuvo atenta a mis consultas. ¡Servicio muy recomendado!",
     image: "/images/profiles/jose.jpeg",
     date: "Marzo 2024",
   },
@@ -54,7 +54,7 @@ const testimonials = [
     location: "Brasil",
     origin: "Lima",
     message:
-      "La señorita Rut nos brindó una excelente orientación en cada etapa de nuestro viaje, asegurándose de que no tuviéramos ningún inconveniente. Siempre estuvo atenta a mis consultas. ¡Servicio muy recomendado!",
+      "Agradezco a la señorita Thalía por su excelente atención y seguimiento constante durante nuestro viaje. Mi mamá y yo quedamos muy contentas con la experiencia brindada.",
     image: "/images/profiles/ruby.jpeg",
     date: "Noviembre 2023",
   },
